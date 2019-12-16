@@ -4,7 +4,6 @@ package com.example.mapskotlin
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -89,7 +88,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
 
             )
-            
+
             return
         }
     }
