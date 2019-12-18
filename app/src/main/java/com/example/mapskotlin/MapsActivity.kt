@@ -16,7 +16,6 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 
 
-
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     override fun onMarkerClick(p0: Marker?) = false
 
@@ -60,10 +59,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
         setUpMap()
 
-        map.isMyLocationEnabled = true
-        fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
+        map.isMyLocationEnabled = true //puntito azul para ver en el mapa tu ubicación y boton para centrar el mapa en mi ubicación
+        fusedLocationClient.lastLocation.addOnSuccessListener(this) { location -> //te da la localización mas reciente disponible
 
-            if (location != null) {
+            if (location != null) { //si puedes conseguir la localización, mueve el mapa a ese punto
                 lastLocation = location
                 val currentLatLng = LatLng(location.latitude, location.longitude)
                 map.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
