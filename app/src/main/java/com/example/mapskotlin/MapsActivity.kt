@@ -10,6 +10,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.location.Location
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.ResolvableApiException
@@ -26,10 +27,15 @@ import com.google.maps.android.clustering.ClusterManager
 
 import java.io.IOException
 import java.io.InputStream
+import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 
-open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
-    GoogleMap.OnInfoWindowClickListener {
+open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
 
     override fun onMarkerClick(p0: Marker?) = false
@@ -107,6 +113,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
 
 
         setUpMap()
+        listener()
 
 
     }
@@ -319,8 +326,25 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     }
 
 
-    override fun onInfoWindowClick(p0: Marker?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun listener() {
+        //listener marker
+        map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
+            override fun onMarkerClick(marker: Marker): Boolean {
+                Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
+                marker.showInfoWindow()
+
+                return false
+            }
+        })
+
+        //listener info window
+        
+        map.setOnInfoWindowClickListener { marker ->
+            val ssid = marker.title
+            Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
+            marker.hideInfoWindow()
+        }
     }
+
 
 }
