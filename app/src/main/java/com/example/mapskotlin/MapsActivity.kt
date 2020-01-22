@@ -5,6 +5,9 @@ import android.app.Activity
 import android.content.Intent
 import android.content.IntentSender
 import android.content.pm.PackageManager
+import android.content.res.AssetManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.location.Location
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -15,17 +18,29 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
+
+import com.google.gson.Gson
+import com.google.maps.android.clustering.ClusterManager
 
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+import java.io.IOException
+import java.io.InputStream
+
+
+open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
+    GoogleMap.OnInfoWindowClickListener {
+
+
     override fun onMarkerClick(p0: Marker?) = false
 
-    private lateinit var map: GoogleMap
+    protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var lastLocation: Location
+    private val mapMarkers = null
+
+    //propiedad para clustering en google map
+    protected lateinit var mClusterManager: ClusterManager<MyItem>
 
     //propiedades para actualizar la localización del usuario en tiempo real
     private lateinit var locationCallback: LocationCallback
@@ -50,8 +65,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
 
-        // Registrar escucha onMapReadyCallback
         mapFragment.getMapAsync(this)
+
+        // Registrar escucha onMapReadyCallback
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
 
@@ -60,10 +76,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 super.onLocationResult(p0)
 
                 lastLocation = p0.lastLocation
-                placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
+                // placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
             }
         }
         createLocationRequest()
+
+
     }
 
 
@@ -80,30 +98,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
+        setUpClusterer()
+        sacarArrayScout()
 
-        // Add a marker in Barcelona and move the camera
-        val barcelona = LatLng(41.39, 2.15)
-       // map.addMarker(MarkerOptions().position(barcelona).title("Marker in Barcelona"))
-        //map.moveCamera(CameraUpdateFactory.newLatLng(barcelona))
-        //map.moveCamera(CameraUpdateFactory.newLatLngZoom(barcelona, 15.0f))º
 
         map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
         map.setOnMarkerClickListener(this)
 
+
         setUpMap()
 
-        map.isMyLocationEnabled =
-            true //puntito azul para ver en el mapa tu ubicación y boton para centrar el mapa en mi ubicación
-        fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
-            //te da la localización mas reciente disponible
 
-            if (location != null) { //si puedes conseguir la localización, mueve el mapa a ese punto
-                lastLocation = location
-                val currentLatLng = LatLng(location.latitude, location.longitude)
-                map.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
-            }
-
-        }
     }
 
     //This code checks if the app has been granted the ACCESS_FINE_LOCATION permission.
@@ -129,8 +134,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
             if (location != null) {
                 lastLocation = location
                 val currentLatLng = LatLng(location.latitude, location.longitude)
-               // placeMarkerOnMap(currentLatLng)
-                map.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12f))
+                placeMarkerOnMap(currentLatLng) // marca en el punto en el que se encuentra el usuario al abrir al aplicación
+                map.animateCamera(
+                    CameraUpdateFactory.newLatLngZoom(
+                        currentLatLng,
+                        12f
+                    )
+                ) //mueve la camara al punto en el que se encuentra el usuario
             }
         }
     }
@@ -227,14 +237,90 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     }
 
 
-///funcion para poner marcas en el mapa
+    //funciones para iniciar clustering
 
-    private fun placeMarkerOnMap(location: LatLng) {
-        // 1
-        val markerOptions = MarkerOptions().position(location)
-        // 2
-        map.addMarker(markerOptions)
+    private fun setUpClusterer() {
+
+        mClusterManager = ClusterManager(this, map)
+        map.setOnCameraIdleListener(mClusterManager)
+        map.setOnMarkerClickListener(mClusterManager)
+
     }
 
+
+    fun sacarArrayScout() {
+
+        val gson = Gson()
+        var json = ""
+
+        try {
+            val inputStream: InputStream = assets.open("vehicles.json")
+            json = inputStream.bufferedReader().use { it.readText() }
+
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        val arrayScouts: ScoutMotos =
+            gson.fromJson(json, ScoutMotos::class.java)
+
+        println(arrayScouts.vehicles[0].toString())
+        val motos: Array<MotoScout> = arrayScouts.vehicles
+
+        for (moto in motos) {
+            moto.marca = "scout"
+            val item =
+                MyItem(moto.latitude.toDouble(), moto.longitude.toDouble(), moto.id, "snippet")
+            placeMotoOnMapClustering(item)
+        }
+    }
+
+
+///funcion para poner marcas en el mapa
+
+    fun placeMarkerOnMap(latLng: LatLng) {
+
+        val markerOptions =
+            MarkerOptions().position(latLng)
+        markerOptions.icon(
+            BitmapDescriptorFactory.fromBitmap(
+                BitmapFactory.decodeResource(resources, R.mipmap.ic_user_location)
+            )
+        )
+        map.addMarker(markerOptions)
+
+
+    }
+
+    //funcion para poner moto en el mapa segun la marca
+    fun placeMotoOnMap(moto: MotoScout) {
+        // 1
+
+        val markerOptions =
+            MarkerOptions().position(LatLng(moto.latitude.toDouble(), moto.longitude.toDouble()))
+
+        if (moto.marca.equals("scout"))
+            markerOptions.icon(
+                BitmapDescriptorFactory.fromBitmap(
+
+                    BitmapFactory.decodeResource(resources, R.drawable.scout_round_bmp)
+                )
+            )
+        map.addMarker(markerOptions)
+
+        //cluster
+
+
+    }
+
+    //funcion para poner moto en el mapa segun la marca con clustering
+    fun placeMotoOnMapClustering(item: MyItem) {
+        mClusterManager.setRenderer(OwnIconRendered(this, map, mClusterManager))
+        mClusterManager.addItem(item)
+    }
+
+
+    override fun onInfoWindowClick(p0: Marker?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
 }

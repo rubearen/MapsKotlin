@@ -1,4 +1,1478 @@
 <resources>
     <string name="app_name">MapsKotlin</string>
     <string name="title_activity_maps">Map</string>
+    <string name="vehicles">{
+    "vehicles": [
+        {
+            "estimated_range_meters": 34681,
+            "has_incentive": false,
+            "id": 1475,
+            "latitude": 41.399275,
+            "longitude": 2.1855816,
+            "public_name": "1475",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 55925,
+            "has_incentive": false,
+            "id": 315,
+            "latitude": 41.391475,
+            "longitude": 2.1937516,
+            "public_name": "315",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 15595,
+            "has_incentive": false,
+            "id": 1951,
+            "latitude": 41.398505,
+            "longitude": 2.204555,
+            "public_name": "1951",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 13229,
+            "has_incentive": false,
+            "id": 1642,
+            "latitude": 41.4036466,
+            "longitude": 2.1932883,
+            "public_name": "1642",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 32911,
+            "has_incentive": false,
+            "id": 1941,
+            "latitude": 41.4086166,
+            "longitude": 2.1868083,
+            "public_name": "1941",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 10054,
+            "has_incentive": false,
+            "id": 1439,
+            "latitude": 41.402795,
+            "longitude": 2.1887733,
+            "public_name": "1439",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 17944,
+            "has_incentive": false,
+            "id": 1133,
+            "latitude": 41.40647,
+            "longitude": 2.1250916,
+            "public_name": "1133",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1352,
+            "latitude": 41.4047,
+            "longitude": 2.1941566,
+            "public_name": "1352",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 31028,
+            "has_incentive": false,
+            "id": 1458,
+            "latitude": 41.3985083,
+            "longitude": 2.2031183,
+            "public_name": "1458",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 27262,
+            "has_incentive": false,
+            "id": 1037,
+            "latitude": 41.3577566,
+            "longitude": 2.1277916,
+            "public_name": "1037",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 4876,
+            "has_incentive": false,
+            "id": 1138,
+            "latitude": 41.3720466,
+            "longitude": 2.1801816,
+            "public_name": "1138",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 30561,
+            "has_incentive": false,
+            "id": 1350,
+            "latitude": 41.3970083,
+            "longitude": 2.1855833,
+            "public_name": "1350",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 11346,
+            "has_incentive": false,
+            "id": 1861,
+            "latitude": 41.41865,
+            "longitude": 2.1720583,
+            "public_name": "1861",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 37498,
+            "has_incentive": false,
+            "id": 1145,
+            "latitude": 41.40233,
+            "longitude": 2.20919,
+            "public_name": "1145",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 107826,
+            "has_incentive": false,
+            "id": 348,
+            "latitude": 41.3901066,
+            "longitude": 2.2004,
+            "public_name": "348",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 20921,
+            "has_incentive": false,
+            "id": 471,
+            "latitude": 41.3970666,
+            "longitude": 2.19493,
+            "public_name": "471",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 43629,
+            "has_incentive": false,
+            "id": 1230,
+            "latitude": 41.4008133,
+            "longitude": 2.1148016,
+            "public_name": "1230",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 13679,
+            "has_incentive": false,
+            "id": 129,
+            "latitude": 41.3849066,
+            "longitude": 2.176765,
+            "public_name": "129",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 14645,
+            "has_incentive": false,
+            "id": 1381,
+            "latitude": 41.4112366,
+            "longitude": 2.1884216,
+            "public_name": "1381",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 33378,
+            "has_incentive": false,
+            "id": 1698,
+            "latitude": 41.377805,
+            "longitude": 2.1159583,
+            "public_name": "1698",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 52304,
+            "has_incentive": false,
+            "id": 260,
+            "latitude": 41.3928416,
+            "longitude": 2.196465,
+            "public_name": "260",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 6276,
+            "has_incentive": false,
+            "id": 1171,
+            "latitude": 41.3830266,
+            "longitude": 2.1072883,
+            "public_name": "1171",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 26957,
+            "has_incentive": false,
+            "id": 120,
+            "latitude": 41.3968583,
+            "longitude": 2.200075,
+            "public_name": "120",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 64374,
+            "has_incentive": false,
+            "id": 427,
+            "latitude": 41.3893116,
+            "longitude": 2.1998983,
+            "public_name": "427",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 109033,
+            "has_incentive": false,
+            "id": 227,
+            "latitude": 41.4380666,
+            "longitude": 2.2132633,
+            "public_name": "227",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 33378,
+            "has_incentive": false,
+            "id": 1416,
+            "latitude": 41.4193633,
+            "longitude": 2.2090083,
+            "public_name": "1416",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 11829,
+            "has_incentive": false,
+            "id": 1122,
+            "latitude": 41.39256,
+            "longitude": 2.1179566,
+            "public_name": "1122",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 36098,
+            "has_incentive": false,
+            "id": 1626,
+            "latitude": 41.3713116,
+            "longitude": 2.1575816,
+            "public_name": "1626",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 44579,
+            "has_incentive": false,
+            "id": 1772,
+            "latitude": 41.4011666,
+            "longitude": 2.1976666,
+            "public_name": "1772",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 14178,
+            "has_incentive": false,
+            "id": 1279,
+            "latitude": 41.35776,
+            "longitude": 2.127775,
+            "public_name": "1279",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 29145,
+            "has_incentive": false,
+            "id": 1481,
+            "latitude": 41.3574716,
+            "longitude": 2.1243916,
+            "public_name": "1481",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1313,
+            "latitude": 41.4112583,
+            "longitude": 2.1886266,
+            "public_name": "1313",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 61960,
+            "has_incentive": false,
+            "id": 100,
+            "latitude": 41.3981516,
+            "longitude": 2.2090933,
+            "public_name": "100",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 35148,
+            "has_incentive": false,
+            "id": 1849,
+            "latitude": 41.4051716,
+            "longitude": 2.1244266,
+            "public_name": "1849",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 32911,
+            "has_incentive": false,
+            "id": 1000,
+            "latitude": 41.3765666,
+            "longitude": 2.1347766,
+            "public_name": "1000",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 40797,
+            "has_incentive": false,
+            "id": 1343,
+            "latitude": 41.4115466,
+            "longitude": 2.1868883,
+            "public_name": "1343",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 22128,
+            "has_incentive": false,
+            "id": 41,
+            "latitude": 41.4049133,
+            "longitude": 2.2146333,
+            "public_name": "41",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 60753,
+            "has_incentive": false,
+            "id": 152,
+            "latitude": 41.3921733,
+            "longitude": 2.1976333,
+            "public_name": "152",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 11829,
+            "has_incentive": false,
+            "id": 1463,
+            "latitude": 41.4010533,
+            "longitude": 2.1948366,
+            "public_name": "1463",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 25846,
+            "has_incentive": false,
+            "id": 1528,
+            "latitude": 41.4302266,
+            "longitude": 2.1845416,
+            "public_name": "1528",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 29612,
+            "has_incentive": false,
+            "id": 1967,
+            "latitude": 41.4005483,
+            "longitude": 2.1950166,
+            "public_name": "1967",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 26313,
+            "has_incentive": false,
+            "id": 1389,
+            "latitude": 41.4302183,
+            "longitude": 2.1849016,
+            "public_name": "1389",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 20310,
+            "has_incentive": false,
+            "id": 1776,
+            "latitude": 41.4044483,
+            "longitude": 2.190075,
+            "public_name": "1776",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 78858,
+            "has_incentive": false,
+            "id": 218,
+            "latitude": 41.38756,
+            "longitude": 2.1807683,
+            "public_name": "218",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1472,
+            "latitude": 41.38895,
+            "longitude": 2.1948566,
+            "public_name": "1472",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 11265,
+            "has_incentive": false,
+            "id": 414,
+            "latitude": 41.4115,
+            "longitude": 2.2026516,
+            "public_name": "414",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 89721,
+            "has_incentive": false,
+            "id": 193,
+            "latitude": 41.406885,
+            "longitude": 2.1913633,
+            "public_name": "193",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 44096,
+            "has_incentive": false,
+            "id": 1981,
+            "latitude": 41.41167,
+            "longitude": 2.2196583,
+            "public_name": "1981",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 76444,
+            "has_incentive": false,
+            "id": 99,
+            "latitude": 41.3957066,
+            "longitude": 2.1948966,
+            "public_name": "99",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 71616,
+            "has_incentive": false,
+            "id": 143,
+            "latitude": 41.3524933,
+            "longitude": 2.1261033,
+            "public_name": "143",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 25363,
+            "has_incentive": false,
+            "id": 1240,
+            "latitude": 41.3855066,
+            "longitude": 2.1091566,
+            "public_name": "1240",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 37031,
+            "has_incentive": false,
+            "id": 1271,
+            "latitude": 41.4094216,
+            "longitude": 2.1887133,
+            "public_name": "1271",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 8175,
+            "has_incentive": false,
+            "id": 1159,
+            "latitude": 41.410795,
+            "longitude": 2.1895266,
+            "public_name": "1159",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 42696,
+            "has_incentive": false,
+            "id": 1112,
+            "latitude": 41.3758066,
+            "longitude": 2.14627,
+            "public_name": "1112",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 26779,
+            "has_incentive": false,
+            "id": 1034,
+            "latitude": 41.37369,
+            "longitude": 2.1587316,
+            "public_name": "1034",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 61960,
+            "has_incentive": false,
+            "id": 123,
+            "latitude": 41.40103,
+            "longitude": 2.2081333,
+            "public_name": "123",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 92135,
+            "has_incentive": false,
+            "id": 450,
+            "latitude": 41.3772116,
+            "longitude": 2.1088866,
+            "public_name": "450",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 33732,
+            "has_incentive": false,
+            "id": 1969,
+            "latitude": 41.4225733,
+            "longitude": 2.1756666,
+            "public_name": "1969",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 28196,
+            "has_incentive": false,
+            "id": 1076,
+            "latitude": 41.3713366,
+            "longitude": 2.1397166,
+            "public_name": "1076",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 8175,
+            "has_incentive": false,
+            "id": 1456,
+            "latitude": 41.3931216,
+            "longitude": 2.1894866,
+            "public_name": "1456",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 8642,
+            "has_incentive": false,
+            "id": 1111,
+            "latitude": 41.3781916,
+            "longitude": 2.1163366,
+            "public_name": "1111",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 67995,
+            "has_incentive": false,
+            "id": 151,
+            "latitude": 41.3965283,
+            "longitude": 2.19449,
+            "public_name": "151",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1238,
+            "latitude": 41.3917583,
+            "longitude": 2.1848333,
+            "public_name": "1238",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 27729,
+            "has_incentive": false,
+            "id": 1079,
+            "latitude": 41.367525,
+            "longitude": 2.1337583,
+            "public_name": "1079",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 44579,
+            "has_incentive": false,
+            "id": 1628,
+            "latitude": 41.4002666,
+            "longitude": 2.1887216,
+            "public_name": "1628",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 31962,
+            "has_incentive": false,
+            "id": 1392,
+            "latitude": 41.3972866,
+            "longitude": 2.1953383,
+            "public_name": "1392",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 14178,
+            "has_incentive": false,
+            "id": 1557,
+            "latitude": 41.4218483,
+            "longitude": 2.1872166,
+            "public_name": "1557",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 7693,
+            "has_incentive": false,
+            "id": 1354,
+            "latitude": 41.4002833,
+            "longitude": 2.1963533,
+            "public_name": "1354",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 5810,
+            "has_incentive": false,
+            "id": 1163,
+            "latitude": 41.3941666,
+            "longitude": 2.190395,
+            "public_name": "1163",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 90928,
+            "has_incentive": false,
+            "id": 214,
+            "latitude": 41.4070883,
+            "longitude": 2.2094116,
+            "public_name": "214",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 12472,
+            "has_incentive": false,
+            "id": 62,
+            "latitude": 41.3957916,
+            "longitude": 2.19251,
+            "public_name": "62",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 39863,
+            "has_incentive": false,
+            "id": 1561,
+            "latitude": 41.4032216,
+            "longitude": 2.1885533,
+            "public_name": "1561",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 28164,
+            "has_incentive": false,
+            "id": 411,
+            "latitude": 41.3918,
+            "longitude": 2.1909216,
+            "public_name": "411",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 42648,
+            "has_incentive": false,
+            "id": 96,
+            "latitude": 41.3980366,
+            "longitude": 2.1872933,
+            "public_name": "96",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 31495,
+            "has_incentive": false,
+            "id": 1168,
+            "latitude": 41.3958633,
+            "longitude": 2.1158366,
+            "public_name": "1168",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 21710,
+            "has_incentive": false,
+            "id": 1353,
+            "latitude": 41.4009283,
+            "longitude": 2.19777,
+            "public_name": "1353",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 23480,
+            "has_incentive": false,
+            "id": 1266,
+            "latitude": 41.395495,
+            "longitude": 2.1886266,
+            "public_name": "1266",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 101791,
+            "has_incentive": false,
+            "id": 56,
+            "latitude": 41.40417,
+            "longitude": 2.1909783,
+            "public_name": "56",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1443,
+            "latitude": 41.3575083,
+            "longitude": 2.1243333,
+            "public_name": "1443",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 11829,
+            "has_incentive": false,
+            "id": 1447,
+            "latitude": 41.3945216,
+            "longitude": 2.1874466,
+            "public_name": "1447",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 38914,
+            "has_incentive": false,
+            "id": 1263,
+            "latitude": 41.4205033,
+            "longitude": 2.1821883,
+            "public_name": "1263",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 28662,
+            "has_incentive": false,
+            "id": 1867,
+            "latitude": 41.380325,
+            "longitude": 2.1075066,
+            "public_name": "1867",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 39397,
+            "has_incentive": false,
+            "id": 1189,
+            "latitude": 41.416705,
+            "longitude": 2.1991816,
+            "public_name": "1189",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 95756,
+            "has_incentive": false,
+            "id": 394,
+            "latitude": 41.4006916,
+            "longitude": 2.2064333,
+            "public_name": "394",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 40234,
+            "has_incentive": false,
+            "id": 103,
+            "latitude": 41.4269783,
+            "longitude": 2.1749716,
+            "public_name": "103",
+            "vehicle_type": "SILENCE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 41280,
+            "has_incentive": false,
+            "id": 1280,
+            "latitude": 41.403065,
+            "longitude": 2.1916783,
+            "public_name": "1280",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 17944,
+            "has_incentive": false,
+            "id": 1300,
+            "latitude": 41.4021966,
+            "longitude": 2.19473,
+            "public_name": "1300",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": 58,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 9109,
+            "has_incentive": false,
+            "id": 1405,
+            "latitude": 41.4226383,
+            "longitude": 2.1773683,
+            "public_name": "1405",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 51097,
+            "has_incentive": false,
+            "id": 7,
+            "latitude": 41.3893733,
+            "longitude": 2.1999666,
+            "public_name": "7",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 59546,
+            "has_incentive": false,
+            "id": 207,
+            "latitude": 41.3902816,
+            "longitude": 2.1907116,
+            "public_name": "207",
+            "vehicle_type": "SILENCE",
+            "current_location_id": 59,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        },
+        {
+            "estimated_range_meters": 18427,
+            "has_incentive": false,
+            "id": 1697,
+            "latitude": 41.40935,
+            "longitude": 2.159255,
+            "public_name": "1697",
+            "vehicle_type": "SCOOT_EBIKE",
+            "current_location_id": null,
+            "require_garage_destination": false,
+            "access_group": {
+                "id": 128,
+                "name": "[Public] Público",
+                "is_public": true
+            }
+        }
+    ],
+    "vehicle_types": [
+        {
+            "id": 9,
+            "name": "eBike",
+            "const": "SCOOT_EBIKE",
+            "vehicle_class": "bicycle"
+        },
+        {
+            "id": 8,
+            "name": "Silence",
+            "const": "SILENCE",
+            "vehicle_class": "scooter"
+        }
+    ]
+}</string>
 </resources>
