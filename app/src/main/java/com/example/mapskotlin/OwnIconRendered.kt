@@ -25,7 +25,9 @@ class OwnIconRendered(
 */
     override fun onBeforeClusterItemRendered(item: MyItem?, markerOptions: MarkerOptions?) {
         super.onBeforeClusterItemRendered(item, markerOptions)
-        markerOptions?.icon(BitmapDescriptorFactory.fromResource(R.drawable.scout_round_bmp))
+        if (item?.getMarca().equals("scout")) {
+            markerOptions?.icon(BitmapDescriptorFactory.fromResource(R.drawable.scout_icon_round25))
+        }
     }
 }
 

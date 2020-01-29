@@ -2,11 +2,11 @@ package com.example.mapskotlin
 
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import android.content.pm.PackageManager
-import android.content.res.AssetManager
-import android.graphics.Bitmap
+
 import android.graphics.BitmapFactory
 import android.location.Location
 import android.os.Bundle
@@ -28,17 +28,13 @@ import com.google.maps.android.clustering.ClusterManager
 import java.io.IOException
 import java.io.InputStream
 import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+import android.view.View
+import com.google.maps.android.clustering.Cluster
 
 
-open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-
-    override fun onMarkerClick(p0: Marker?) = false
 
     protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -51,16 +47,16 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     //propiedades para actualizar la localización del usuario en tiempo real
     private lateinit var locationCallback: LocationCallback
 
-
     private lateinit var locationRequest: LocationRequest
     private var locationUpdateState = false
 
+    //variables estatidas, son comunes a todos los objetos
     companion object {
-        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
-
-        private const val REQUEST_CHECK_SETTINGS = 2
         //propiedades para actualizar la localización del usuario en tiempo real
-
+        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
+        private const val REQUEST_CHECK_SETTINGS = 2
+        //ultimo marker que ha apretado el usuario, lo guardamos aquí para poder acceder desde custominfowindow
+        var clickedClusterItem: MyItem? = null
     }
 
 
@@ -72,22 +68,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
             .findFragmentById(R.id.map) as SupportMapFragment
 
         mapFragment.getMapAsync(this)
-
-        // Registrar escucha onMapReadyCallback
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
-
-        locationCallback = object : LocationCallback() {
-            override fun onLocationResult(p0: LocationResult) {
-                super.onLocationResult(p0)
-
-                lastLocation = p0.lastLocation
-                // placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
-            }
-        }
-        createLocationRequest()
-
-
+        onMapReadyCallback()
     }
 
 
@@ -105,15 +86,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         setUpClusterer()
-        sacarArrayScout()
-
-
-        map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
-        map.setOnMarkerClickListener(this)
-
-
-        setUpMap()
         listener()
+        map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
+        map.setOnMarkerClickListener(mClusterManager)
+
+        sacarArrayScout()
+        setUpMap()
+        seUptInfoWindow()
 
 
     }
@@ -133,9 +112,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
             )
             return
         }
-
         map.isMyLocationEnabled = true
-
         fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
             // Got last known location. In some rare situations this can be null.
             if (location != null) {
@@ -152,6 +129,19 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
         }
     }
 
+
+    fun onMapReadyCallback() { // Registrar escucha onMapReadyCallback
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        locationCallback = object : LocationCallback() {
+            override fun onLocationResult(p0: LocationResult) {
+                super.onLocationResult(p0)
+                lastLocation = p0.lastLocation
+                // placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
+            }
+        }
+        createLocationRequest()
+
+    }
 
     private fun startLocationUpdates() {//funcion para actualizar la posicion en tiempo real
         //si no nos han dado permisos, los pedimos
@@ -250,7 +240,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
 
         mClusterManager = ClusterManager(this, map)
         map.setOnCameraIdleListener(mClusterManager)
-        map.setOnMarkerClickListener(mClusterManager)
+        // map.setOnMarkerClickListener(mClusterManager)
+
 
     }
 
@@ -274,9 +265,15 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
         val motos: Array<MotoScout> = arrayScouts.vehicles
 
         for (moto in motos) {
-            moto.marca = "scout"
+
             val item =
-                MyItem(moto.latitude.toDouble(), moto.longitude.toDouble(), moto.id, "snippet")
+                MyItem(
+                    moto.latitude.toDouble(),
+                    moto.longitude.toDouble(),
+                    moto.id,
+                    "snippet",
+                    "Scout", moto.vehicle_type
+                )
             placeMotoOnMapClustering(item)
         }
     }
@@ -309,7 +306,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
             markerOptions.icon(
                 BitmapDescriptorFactory.fromBitmap(
 
-                    BitmapFactory.decodeResource(resources, R.drawable.scout_round_bmp)
+                    BitmapFactory.decodeResource(resources, R.drawable.scout_icon_round25)
                 )
             )
         map.addMarker(markerOptions)
@@ -326,24 +323,66 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnM
     }
 
 
+    private fun seUptInfoWindow() {
+
+        var customInfoWindow = CustomInfoWindow(this)
+        map!!.setInfoWindowAdapter(mClusterManager.markerManager)
+        mClusterManager.markerCollection.setOnInfoWindowAdapter(customInfoWindow)
+    }
+
+
     fun listener() {
-        //listener marker
-        map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
-            override fun onMarkerClick(marker: Marker): Boolean {
-                Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
-                marker.showInfoWindow()
 
-                return false
+
+        //mClusterManager?.setOnClusterItemClickListener(this)
+
+        mClusterManager//listener para cada marker
+            .setOnClusterItemClickListener { item ->
+                clickedClusterItem = item
+
+
+
+
+                Toast.makeText(
+                    getBaseContext(),
+                    "you click marker" + item.getMarca(),
+                    Toast.LENGTH_SHORT
+                ).show()
+                false
             }
-        })
 
-        //listener info window
-        
-        map.setOnInfoWindowClickListener { marker ->
-            val ssid = marker.title
-            Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
-            marker.hideInfoWindow()
-        }
+        // mClusterManager?.setOnClusterClickListener(this)
+
+        mClusterManager //listener para cada cluster
+            .setOnClusterClickListener { item ->
+
+                Toast.makeText(
+                    getBaseContext(),
+                    "you click cluster",
+                    Toast.LENGTH_SHORT
+                ).show()
+                false
+            }
+
+/*
+               //listener marker
+
+               map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
+                   override fun onMarkerClick(marker: Marker): Boolean {
+                       Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
+                       marker.showInfoWindow()
+
+                       return false
+                   }
+               })
+
+               //listener info window
+
+               map.setOnInfoWindowClickListener { marker ->
+                   val ssid = marker.title
+                   Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
+                   marker.hideInfoWindow()
+               }*/
     }
 
 
