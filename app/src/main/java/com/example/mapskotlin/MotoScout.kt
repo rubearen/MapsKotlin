@@ -5,9 +5,10 @@ class MotoScout(
     val id: String,
     val latitude: String,
     val longitude: String,
-    var marca: String,
-    var vehicle_type:String
+    var vehicle_type: String,
+     var marca: String = "Scoot"
 ) {
+
 
     override fun toString(): String {
         return "Moto(id='$id', latitude='$latitude', longitude='$longitude', marca='$marca', modelo= '$vehicle_type)"

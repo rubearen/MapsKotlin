@@ -6,54 +6,44 @@ import com.google.maps.android.clustering.ClusterItem
 
 
 class MyItem : ClusterItem {
-    private val mPosition: LatLng
-    private val mTitle: String
-    private val mSnippet: String
-    private val mMarca: String
-    private val mModelo: String
+    val mPosition: LatLng
+    val mTitle: String
+    val mDistanceBat: String?
+    val mMarca: String
+    val mModelo: String?
+    val mPrice: String?
+    val mDistanceFromUser: String?
 
-    constructor(lat: Double, lng: Double, marca: String) {
-        mPosition = LatLng(lat, lng)
-        mTitle = ""
-        mSnippet = ""
-        mMarca = marca
-        mModelo = ""
-
-
-    }
 
     constructor(
         lat: Double,
         lng: Double,
         title: String,
-        snippet: String,
+        distance: String?,
         marca: String,
-        modelo: String
+        modelo: String?,
+        price: String?,
+        distanceFromUser: String?
     ) {
         mPosition = LatLng(lat, lng)
         mTitle = title
-        mSnippet = snippet
+        mDistanceBat = distance
         mMarca = marca
         mModelo = modelo
+        mPrice = price
+        mDistanceFromUser = distanceFromUser
     }
 
     override fun getPosition(): LatLng {
         return mPosition
     }
 
-    fun getMarca(): String {
-        return mMarca
-    }
-
-    fun getModelo(): String {
-        return mModelo
-    }
 
     override fun getTitle(): String {
         return mTitle
     }
 
     override fun getSnippet(): String {
-        return mSnippet
+        return ""
     }
 }

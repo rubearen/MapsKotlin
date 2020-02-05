@@ -1,0 +1,4362 @@
+
+{
+  "operator": {
+    "registerUrl": {
+      "url_es": "https://smarturl.it/app-ecooltra",
+      "url_ca": "https://smarturl.it/app-ecooltra",
+      "url_en": "https://smarturl.it/app-ecooltra",
+      "storeIOS": null,
+      "storeAndroid": null,
+      "appIOS": null,
+      "appAndroid": null
+    },
+    "openUrl": {
+      "url_es": null,
+      "url_ca": null,
+      "url_en": null,
+      "storeIOS": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+      "storeAndroid": "market://details?id=com.mobime.ecooltra",
+      "appIOS": "com.mobime.eCooltra://",
+      "appAndroid": "insert-94b83b4d://"
+    },
+    "price": 0.21,
+    "registerPrice": "Gratis",
+    "kmMin": 0,
+    "kmMax": 20000,
+    "offers": [
+      {
+        "_id": "5e2b22994a89f959e57542ee",
+        "name": "Ofertón",
+        "description": "providers.offer.description.ecooltra.1",
+        "dateFrom": "2018-05-01T00:00:00.000Z",
+        "dateTo": "2018-12-31T00:00:00.000Z",
+        "oldPrice": null,
+        "newPrice": null,
+        "url": "",
+        "promoCode": "WEB5",
+        "__v": 0
+      }
+    ],
+    "_id": "5e2b22994a89f959e57542c8",
+    "id": 2,
+    "type": "flexible",
+    "needApp": true,
+    "visible": true,
+    "nameToShow": "eCooltra",
+    "vehicleType": "motorcycle",
+    "integration": 1,
+    "priceText": "price.operator.ecooltra",
+    "name": "ECOOLTRA",
+    "canOpen": false,
+    "display": true,
+    "version": 1.2,
+    "displayName": "eCooltra",
+    "reserveTime": 15,
+    "realTime": null,
+    "terms": null,
+    "__v": 0
+  },
+  "vehicles": [
+    {
+      "id": "ECOOLTRA-ES-B-A00026",
+      "coordinates": {
+        "latitude": 41.408245,
+        "longitude": 2.160622
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00026",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.408245,
+            "longitude": 2.160622
+          },
+          "distance": "16 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2264BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00026&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.5,
+          "currentTime": 258
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00027",
+      "coordinates": {
+        "latitude": 41.386192,
+        "longitude": 2.167948
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00027",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386192,
+            "longitude": 2.167948
+          },
+          "distance": "67 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2270BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00027&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00036",
+      "coordinates": {
+        "latitude": 41.409874,
+        "longitude": 2.164262
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00036",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.409874,
+            "longitude": 2.164262
+          },
+          "distance": "21 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2261BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00036&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00043",
+      "coordinates": {
+        "latitude": 41.390049,
+        "longitude": 2.159175
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00043",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390049,
+            "longitude": 2.159175
+          },
+          "distance": "11 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2319BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00043&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.7,
+          "currentTime": 272
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00062",
+      "coordinates": {
+        "latitude": 41.386578,
+        "longitude": 2.164755
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00062",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386578,
+            "longitude": 2.164755
+          },
+          "distance": "13 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2347BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00062&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.3,
+          "currentTime": 280
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00065",
+      "coordinates": {
+        "latitude": 41.404556,
+        "longitude": 2.17432
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00065",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.404556,
+            "longitude": 2.17432
+          },
+          "distance": "45 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2340BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00065&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.7,
+          "currentTime": 272
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00067",
+      "coordinates": {
+        "latitude": 41.402645,
+        "longitude": 2.146892
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00067",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.402645,
+            "longitude": 2.146892
+          },
+          "distance": "22 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2344BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00067&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 252
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00077",
+      "coordinates": {
+        "latitude": 41.404865,
+        "longitude": 2.159287
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00077",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.404865,
+            "longitude": 2.159287
+          },
+          "distance": "39 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2318BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00077&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00118",
+      "coordinates": {
+        "latitude": 41.38686,
+        "longitude": 2.151157
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00118",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.38686,
+            "longitude": 2.151157
+          },
+          "distance": "46 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2513BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00118&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.4,
+          "currentTime": 269
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00134",
+      "coordinates": {
+        "latitude": 41.390789,
+        "longitude": 2.149393
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00134",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390789,
+            "longitude": 2.149393
+          },
+          "distance": "41 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2529BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00134&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00157",
+      "coordinates": {
+        "latitude": 41.395325,
+        "longitude": 2.155205
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00157",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.395325,
+            "longitude": 2.155205
+          },
+          "distance": "48 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2620BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00157&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00159",
+      "coordinates": {
+        "latitude": 41.381966,
+        "longitude": 2.15879
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00159",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.381966,
+            "longitude": 2.15879
+          },
+          "distance": "14 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2623BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00159&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.3,
+          "currentTime": 279
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00169",
+      "coordinates": {
+        "latitude": 41.405907,
+        "longitude": 2.155842
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00169",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.405907,
+            "longitude": 2.155842
+          },
+          "distance": "34 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2639BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00169&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.4,
+          "currentTime": 256
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00192",
+      "coordinates": {
+        "latitude": 41.406525,
+        "longitude": 2.156718
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00192",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.406525,
+            "longitude": 2.156718
+          },
+          "distance": "57 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2619BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00192&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.4,
+          "currentTime": 257
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00211",
+      "coordinates": {
+        "latitude": 41.40926,
+        "longitude": 2.170367
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00211",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.40926,
+            "longitude": 2.170367
+          },
+          "distance": "51 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3032BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00211&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00222",
+      "coordinates": {
+        "latitude": 41.408066,
+        "longitude": 2.174148
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00222",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.408066,
+            "longitude": 2.174148
+          },
+          "distance": "69 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3051BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00222&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.5,
+          "currentTime": 269
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00223",
+      "coordinates": {
+        "latitude": 41.392303,
+        "longitude": 2.167293
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00223",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392303,
+            "longitude": 2.167293
+          },
+          "distance": "65 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3053BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00223&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.1,
+          "currentTime": 277
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00224",
+      "coordinates": {
+        "latitude": 41.383793,
+        "longitude": 2.156093
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00224",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.383793,
+            "longitude": 2.156093
+          },
+          "distance": "28 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3055BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00224&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23,
+          "currentTime": 276
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00243",
+      "coordinates": {
+        "latitude": 41.398861,
+        "longitude": 2.177147
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00243",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.398861,
+            "longitude": 2.177147
+          },
+          "distance": "41 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2885BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00243&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.3,
+          "currentTime": 279
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00252",
+      "coordinates": {
+        "latitude": 41.397179,
+        "longitude": 2.16348
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00252",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.397179,
+            "longitude": 2.16348
+          },
+          "distance": "16 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2895BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00252&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.5,
+          "currentTime": 270
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00255",
+      "coordinates": {
+        "latitude": 41.386169,
+        "longitude": 2.16655
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00255",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386169,
+            "longitude": 2.16655
+          },
+          "distance": "15 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C2862BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00255&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 281
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00281",
+      "coordinates": {
+        "latitude": 41.392414,
+        "longitude": 2.177127
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00281",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392414,
+            "longitude": 2.177127
+          },
+          "distance": "16 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3119BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00281&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.7,
+          "currentTime": 284
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00300",
+      "coordinates": {
+        "latitude": 41.390942,
+        "longitude": 2.161075
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00300",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390942,
+            "longitude": 2.161075
+          },
+          "distance": "17 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3097BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00300&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.8,
+          "currentTime": 273
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00342",
+      "coordinates": {
+        "latitude": 41.409031,
+        "longitude": 2.170557
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00342",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.409031,
+            "longitude": 2.170557
+          },
+          "distance": "50 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3470BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00342&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 266
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00351",
+      "coordinates": {
+        "latitude": 41.410938,
+        "longitude": 2.157862
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00351",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.410938,
+            "longitude": 2.157862
+          },
+          "distance": "22 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C3478BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00351&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.2,
+          "currentTime": 254
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00363",
+      "coordinates": {
+        "latitude": 41.40873,
+        "longitude": 2.156327
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00363",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.40873,
+            "longitude": 2.156327
+          },
+          "distance": "18 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C4321BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00363&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.2,
+          "currentTime": 255
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00380",
+      "coordinates": {
+        "latitude": 41.389248,
+        "longitude": 2.171525
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00380",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.389248,
+            "longitude": 2.171525
+          },
+          "distance": "33 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C4305BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00380&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 283
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00383",
+      "coordinates": {
+        "latitude": 41.406963,
+        "longitude": 2.15131
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00383",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.406963,
+            "longitude": 2.15131
+          },
+          "distance": "62 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C4306BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00383&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 252
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00392",
+      "coordinates": {
+        "latitude": 41.411201,
+        "longitude": 2.161358
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00392",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.411201,
+            "longitude": 2.161358
+          },
+          "distance": "9 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C4326BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00392&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.4,
+          "currentTime": 257
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00393",
+      "coordinates": {
+        "latitude": 41.392807,
+        "longitude": 2.164195
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00393",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392807,
+            "longitude": 2.164195
+          },
+          "distance": "39 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5064BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00393&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.8,
+          "currentTime": 274
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00409",
+      "coordinates": {
+        "latitude": 41.39325,
+        "longitude": 2.146805
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00409",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.39325,
+            "longitude": 2.146805
+          },
+          "distance": "59 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5044BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00409&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00418",
+      "coordinates": {
+        "latitude": 41.391121,
+        "longitude": 2.167897
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00418",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.391121,
+            "longitude": 2.167897
+          },
+          "distance": "11 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5054BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00418&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.2,
+          "currentTime": 278
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00440",
+      "coordinates": {
+        "latitude": 41.393223,
+        "longitude": 2.175543
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00440",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.393223,
+            "longitude": 2.175543
+          },
+          "distance": "47 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5080BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00440&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00448",
+      "coordinates": {
+        "latitude": 41.392654,
+        "longitude": 2.16417
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00448",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392654,
+            "longitude": 2.16417
+          },
+          "distance": "30 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5103BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00448&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.8,
+          "currentTime": 274
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00450",
+      "coordinates": {
+        "latitude": 41.410454,
+        "longitude": 2.16353
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00450",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.410454,
+            "longitude": 2.16353
+          },
+          "distance": "33 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5092BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00450&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.6,
+          "currentTime": 259
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00457",
+      "coordinates": {
+        "latitude": 41.407978,
+        "longitude": 2.174485
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00457",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.407978,
+            "longitude": 2.174485
+          },
+          "distance": "53 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5102BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00457&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.5,
+          "currentTime": 270
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00458",
+      "coordinates": {
+        "latitude": 41.385395,
+        "longitude": 2.164167
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00458",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.385395,
+            "longitude": 2.164167
+          },
+          "distance": "66 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5104BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00458&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.4,
+          "currentTime": 280
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00473",
+      "coordinates": {
+        "latitude": 41.40728,
+        "longitude": 2.168188
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00473",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.40728,
+            "longitude": 2.168188
+          },
+          "distance": "23 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5711BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00473&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00484",
+      "coordinates": {
+        "latitude": 41.409645,
+        "longitude": 2.171855
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00484",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.409645,
+            "longitude": 2.171855
+          },
+          "distance": "22 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5716BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00484&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.2,
+          "currentTime": 266
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00489",
+      "coordinates": {
+        "latitude": 41.384216,
+        "longitude": 2.170722
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00489",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.384216,
+            "longitude": 2.170722
+          },
+          "distance": "35 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5725BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00489&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.9,
+          "currentTime": 286
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00511",
+      "coordinates": {
+        "latitude": 41.397926,
+        "longitude": 2.162555
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00511",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.397926,
+            "longitude": 2.162555
+          },
+          "distance": "42 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5806BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00511&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.4,
+          "currentTime": 268
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00537",
+      "coordinates": {
+        "latitude": 41.384392,
+        "longitude": 2.170782
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00537",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.384392,
+            "longitude": 2.170782
+          },
+          "distance": "13 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5827BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00537&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.9,
+          "currentTime": 286
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00544",
+      "coordinates": {
+        "latitude": 41.386047,
+        "longitude": 2.16789
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00544",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386047,
+            "longitude": 2.16789
+          },
+          "distance": "21 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5834BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00544&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 283
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00545",
+      "coordinates": {
+        "latitude": 41.402874,
+        "longitude": 2.17666
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00545",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.402874,
+            "longitude": 2.17666
+          },
+          "distance": "47 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5885BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00545&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23,
+          "currentTime": 275
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00548",
+      "coordinates": {
+        "latitude": 41.390961,
+        "longitude": 2.166235
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00548",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390961,
+            "longitude": 2.166235
+          },
+          "distance": "39 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5883BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00548&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.1,
+          "currentTime": 277
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00584",
+      "coordinates": {
+        "latitude": 41.411865,
+        "longitude": 2.158218
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00584",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.411865,
+            "longitude": 2.158218
+          },
+          "distance": "23 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5959BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00584&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.1,
+          "currentTime": 254
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00586",
+      "coordinates": {
+        "latitude": 41.390446,
+        "longitude": 2.169848
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00586",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390446,
+            "longitude": 2.169848
+          },
+          "distance": "9 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5965BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00586&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.4,
+          "currentTime": 280
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00620",
+      "coordinates": {
+        "latitude": 41.399651,
+        "longitude": 2.155425
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00620",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.399651,
+            "longitude": 2.155425
+          },
+          "distance": "48 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5958BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00620&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.8,
+          "currentTime": 261
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00622",
+      "coordinates": {
+        "latitude": 41.408974,
+        "longitude": 2.154095
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00622",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.408974,
+            "longitude": 2.154095
+          },
+          "distance": "15 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6112BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00622&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 253
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00627",
+      "coordinates": {
+        "latitude": 41.405872,
+        "longitude": 2.160925
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00627",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.405872,
+            "longitude": 2.160925
+          },
+          "distance": "41 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6115BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00627&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00638",
+      "coordinates": {
+        "latitude": 41.406376,
+        "longitude": 2.149535
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00638",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.406376,
+            "longitude": 2.149535
+          },
+          "distance": "42 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6089BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00638&referrer_id=RaccTrips"
+          },
+          "currentDistance": 20.9,
+          "currentTime": 251
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00667",
+      "coordinates": {
+        "latitude": 41.385895,
+        "longitude": 2.166947
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00667",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.385895,
+            "longitude": 2.166947
+          },
+          "distance": "17 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6208BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00667&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00686",
+      "coordinates": {
+        "latitude": 41.407421,
+        "longitude": 2.17137
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00686",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.407421,
+            "longitude": 2.17137
+          },
+          "distance": "55 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6190BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00686&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.3,
+          "currentTime": 268
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00688",
+      "coordinates": {
+        "latitude": 41.383633,
+        "longitude": 2.149123
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00688",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.383633,
+            "longitude": 2.149123
+          },
+          "distance": "11 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6202BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00688&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.6,
+          "currentTime": 271
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00695",
+      "coordinates": {
+        "latitude": 41.392006,
+        "longitude": 2.165132
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00695",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392006,
+            "longitude": 2.165132
+          },
+          "distance": "32 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6198BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00695&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.9,
+          "currentTime": 275
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00705",
+      "coordinates": {
+        "latitude": 41.39542,
+        "longitude": 2.151723
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00705",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.39542,
+            "longitude": 2.151723
+          },
+          "distance": "64 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6325BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00705&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.8,
+          "currentTime": 262
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00713",
+      "coordinates": {
+        "latitude": 41.386143,
+        "longitude": 2.164473
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00713",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386143,
+            "longitude": 2.164473
+          },
+          "distance": "12 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6334BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00713&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.3,
+          "currentTime": 280
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00716",
+      "coordinates": {
+        "latitude": 41.390808,
+        "longitude": 2.149403
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00716",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390808,
+            "longitude": 2.149403
+          },
+          "distance": "25 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6339BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00716&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00721",
+      "coordinates": {
+        "latitude": 41.410198,
+        "longitude": 2.170235
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00721",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.410198,
+            "longitude": 2.170235
+          },
+          "distance": "42 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6337BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00721&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00751",
+      "coordinates": {
+        "latitude": 41.401192,
+        "longitude": 2.164995
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00751",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.401192,
+            "longitude": 2.164995
+          },
+          "distance": "26 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6788BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00751&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.3,
+          "currentTime": 268
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00760",
+      "coordinates": {
+        "latitude": 41.402744,
+        "longitude": 2.17
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00760",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.402744,
+            "longitude": 2.17
+          },
+          "distance": "13 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6782BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00760&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.5,
+          "currentTime": 270
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00765",
+      "coordinates": {
+        "latitude": 41.389034,
+        "longitude": 2.163173
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00765",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.389034,
+            "longitude": 2.163173
+          },
+          "distance": "59 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6803BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00765&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23,
+          "currentTime": 276
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00770",
+      "coordinates": {
+        "latitude": 41.386112,
+        "longitude": 2.167827
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00770",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.386112,
+            "longitude": 2.167827
+          },
+          "distance": "46 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6798BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00770&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00785",
+      "coordinates": {
+        "latitude": 41.397957,
+        "longitude": 2.15911
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00785",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.397957,
+            "longitude": 2.15911
+          },
+          "distance": "20 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6950BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00785&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 266
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00810",
+      "coordinates": {
+        "latitude": 41.405918,
+        "longitude": 2.150217
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00810",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.405918,
+            "longitude": 2.150217
+          },
+          "distance": "61 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C6943BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00810&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 252
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00818",
+      "coordinates": {
+        "latitude": 41.408577,
+        "longitude": 2.175383
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00818",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.408577,
+            "longitude": 2.175383
+          },
+          "distance": "37 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7095BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00818&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.5,
+          "currentTime": 270
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00832",
+      "coordinates": {
+        "latitude": 41.39534,
+        "longitude": 2.15503
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00832",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.39534,
+            "longitude": 2.15503
+          },
+          "distance": "36 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7113BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00832&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 265
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00843",
+      "coordinates": {
+        "latitude": 41.389202,
+        "longitude": 2.162823
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00843",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.389202,
+            "longitude": 2.162823
+          },
+          "distance": "12 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7123BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00843&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23,
+          "currentTime": 276
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00847",
+      "coordinates": {
+        "latitude": 41.405529,
+        "longitude": 2.160105
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00847",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.405529,
+            "longitude": 2.160105
+          },
+          "distance": "26 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7124BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00847&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00855",
+      "coordinates": {
+        "latitude": 41.391571,
+        "longitude": 2.165733
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00855",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.391571,
+            "longitude": 2.165733
+          },
+          "distance": "41 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7171BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00855&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23,
+          "currentTime": 276
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00905",
+      "coordinates": {
+        "latitude": 41.383717,
+        "longitude": 2.170917
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00905",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.383717,
+            "longitude": 2.170917
+          },
+          "distance": "28 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7317BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00905&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.9,
+          "currentTime": 287
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00946",
+      "coordinates": {
+        "latitude": 41.39241,
+        "longitude": 2.164815
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00946",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.39241,
+            "longitude": 2.164815
+          },
+          "distance": "56 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7490BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00946&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.9,
+          "currentTime": 275
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00950",
+      "coordinates": {
+        "latitude": 41.405174,
+        "longitude": 2.150083
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00950",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.405174,
+            "longitude": 2.150083
+          },
+          "distance": "40 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7493BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00950&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 253
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00954",
+      "coordinates": {
+        "latitude": 41.389221,
+        "longitude": 2.171835
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00954",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.389221,
+            "longitude": 2.171835
+          },
+          "distance": "12 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7494BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00954&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.6,
+          "currentTime": 283
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00956",
+      "coordinates": {
+        "latitude": 41.403404,
+        "longitude": 2.166422
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00956",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.403404,
+            "longitude": 2.166422
+          },
+          "distance": "43 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7491BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00956&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.2,
+          "currentTime": 267
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00963",
+      "coordinates": {
+        "latitude": 41.391449,
+        "longitude": 2.145992
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00963",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.391449,
+            "longitude": 2.145992
+          },
+          "distance": "19 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7464BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00963&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.8,
+          "currentTime": 261
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00969",
+      "coordinates": {
+        "latitude": 41.387264,
+        "longitude": 2.169035
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00969",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.387264,
+            "longitude": 2.169035
+          },
+          "distance": "56 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7631BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00969&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00990",
+      "coordinates": {
+        "latitude": 41.40546,
+        "longitude": 2.155102
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00990",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.40546,
+            "longitude": 2.155102
+          },
+          "distance": "39 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7652BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00990&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.4,
+          "currentTime": 256
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00994",
+      "coordinates": {
+        "latitude": 41.41209,
+        "longitude": 2.167417
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00994",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.41209,
+            "longitude": 2.167417
+          },
+          "distance": "19 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7660BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00994&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.7,
+          "currentTime": 261
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A00999",
+      "coordinates": {
+        "latitude": 41.411793,
+        "longitude": 2.165342
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A00999",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.411793,
+            "longitude": 2.165342
+          },
+          "distance": "19 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7664BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A00999&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.6,
+          "currentTime": 259
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01010",
+      "coordinates": {
+        "latitude": 41.404701,
+        "longitude": 2.148142
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01010",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.404701,
+            "longitude": 2.148142
+          },
+          "distance": "41 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7764BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01010&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21,
+          "currentTime": 251
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01016",
+      "coordinates": {
+        "latitude": 41.407486,
+        "longitude": 2.161363
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01016",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.407486,
+            "longitude": 2.161363
+          },
+          "distance": "25 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7769BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01016&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.6,
+          "currentTime": 260
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01028",
+      "coordinates": {
+        "latitude": 41.396313,
+        "longitude": 2.154132
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01028",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.396313,
+            "longitude": 2.154132
+          },
+          "distance": "10 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7741BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01028&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.9,
+          "currentTime": 263
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01038",
+      "coordinates": {
+        "latitude": 41.392326,
+        "longitude": 2.164488
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01038",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392326,
+            "longitude": 2.164488
+          },
+          "distance": "25 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7754BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01038&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.9,
+          "currentTime": 275
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01043",
+      "coordinates": {
+        "latitude": 41.404613,
+        "longitude": 2.163182
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01043",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.404613,
+            "longitude": 2.163182
+          },
+          "distance": "15 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7875BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01043&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.9,
+          "currentTime": 263
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01063",
+      "coordinates": {
+        "latitude": 41.402405,
+        "longitude": 2.170225
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01063",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.402405,
+            "longitude": 2.170225
+          },
+          "distance": "21 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7897BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01063&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.6,
+          "currentTime": 271
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01069",
+      "coordinates": {
+        "latitude": 41.409081,
+        "longitude": 2.170505
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01069",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.409081,
+            "longitude": 2.170505
+          },
+          "distance": "28 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C7864BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01069&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.1,
+          "currentTime": 266
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01097",
+      "coordinates": {
+        "latitude": 41.409203,
+        "longitude": 2.16284
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01097",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.409203,
+            "longitude": 2.16284
+          },
+          "distance": "24 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8188BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01097&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.6,
+          "currentTime": 259
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01103",
+      "coordinates": {
+        "latitude": 41.3866,
+        "longitude": 2.166477
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01103",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.3866,
+            "longitude": 2.166477
+          },
+          "distance": "28 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8197BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01103&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.4,
+          "currentTime": 281
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01108",
+      "coordinates": {
+        "latitude": 41.385937,
+        "longitude": 2.165023
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01108",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.385937,
+            "longitude": 2.165023
+          },
+          "distance": "24 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8164BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01108&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.4,
+          "currentTime": 281
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01121",
+      "coordinates": {
+        "latitude": 41.390377,
+        "longitude": 2.171985
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01121",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.390377,
+            "longitude": 2.171985
+          },
+          "distance": "12 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8405BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01121&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.5,
+          "currentTime": 282
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01151",
+      "coordinates": {
+        "latitude": 41.384331,
+        "longitude": 2.163873
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01151",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.384331,
+            "longitude": 2.163873
+          },
+          "distance": "52 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8395BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01151&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.4,
+          "currentTime": 281
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01171",
+      "coordinates": {
+        "latitude": 41.400429,
+        "longitude": 2.164597
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01171",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.400429,
+            "longitude": 2.164597
+          },
+          "distance": "39 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8618BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01171&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.3,
+          "currentTime": 268
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01172",
+      "coordinates": {
+        "latitude": 41.397614,
+        "longitude": 2.15004
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01172",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.397614,
+            "longitude": 2.15004
+          },
+          "distance": "32 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8614BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01172&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.6,
+          "currentTime": 259
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01175",
+      "coordinates": {
+        "latitude": 41.391682,
+        "longitude": 2.16249
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01175",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.391682,
+            "longitude": 2.16249
+          },
+          "distance": "11 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8619BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01175&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.8,
+          "currentTime": 274
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01198",
+      "coordinates": {
+        "latitude": 41.391193,
+        "longitude": 2.175948
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01198",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.391193,
+            "longitude": 2.175948
+          },
+          "distance": "18 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C8778BWF",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01198&referrer_id=RaccTrips"
+          },
+          "currentDistance": 23.7,
+          "currentTime": 284
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01209",
+      "coordinates": {
+        "latitude": 41.401417,
+        "longitude": 2.151812
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01209",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.401417,
+            "longitude": 2.151812
+          },
+          "distance": "47 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5197BWG",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01209&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.4,
+          "currentTime": 257
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01225",
+      "coordinates": {
+        "latitude": 41.404316,
+        "longitude": 2.149632
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01225",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.404316,
+            "longitude": 2.149632
+          },
+          "distance": "57 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5218BWG",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01225&referrer_id=RaccTrips"
+          },
+          "currentDistance": 21.1,
+          "currentTime": 253
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01232",
+      "coordinates": {
+        "latitude": 41.392582,
+        "longitude": 2.164443
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01232",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.392582,
+            "longitude": 2.164443
+          },
+          "distance": "14 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5223BWG",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01232&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.9,
+          "currentTime": 274
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    },
+    {
+      "id": "ECOOLTRA-ES-B-A01255",
+      "coordinates": {
+        "latitude": 41.408012,
+        "longitude": 2.171825
+      },
+      "vehicles": [
+        {
+          "id": "ES-B-A01255",
+          "pricePerMinute": 0.26,
+          "operatorName": "eCooltra",
+          "position": {
+            "latitude": 41.408012,
+            "longitude": 2.171825
+          },
+          "distance": "50 Km",
+          "img": "https://api.racctrips.com/images/ecooltra_new.png",
+          "plate": "C5574BWG",
+          "urls": {
+            "appUrl": "insert-94b83b4d://",
+            "marketUrl": "market://details?id=com.mobime.ecooltra",
+            "iosAppUrl": "com.mobime.eCooltra://",
+            "iosMarketUrl": "https://itunes.apple.com/es/app/ecooltra-motosharing/id1083424977?mt=8",
+            "androidAppUrl": "insert-94b83b4d://",
+            "androidMarketUrl": "market://details?id=com.mobime.ecooltra",
+            "reserveUrl": "ecooltra://reserve?vehicle_id=ES-B-A01255&referrer_id=RaccTrips"
+          },
+          "currentDistance": 22.3,
+          "currentTime": 268
+        }
+      ],
+      "provider": {
+        "id": 2,
+        "name": "eCooltra",
+        "image": "",
+        "planned": false
+      },
+      "needApp": true,
+      "reserved": false,
+      "vehicleType": "motorcycle",
+      "canOpen": false,
+      "pricePerMinute": 0.26
+    }
+  ]
+}
+
