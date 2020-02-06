@@ -41,6 +41,7 @@
         android:drawablePadding="5dp"
         android:singleLine="true"
         android:text="50%"
+        android:textColor="@color/colorLetraInformaciones"
         app:layout_constraintEnd_toStartOf="@+id/material_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pictureMoto"
@@ -55,6 +56,7 @@
         android:drawablePadding="5dp"
         android:singleLine="true"
         android:text="0,50/min"
+        android:textColor="@color/colorLetraInformaciones"
         app:layout_constraintStart_toStartOf="@+id/tv_batery"
         app:layout_constraintTop_toBottomOf="@+id/tv_batery" />
 
@@ -63,10 +65,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="35min"
         android:drawableLeft="@drawable/walk"
         android:drawablePadding="5dp"
         android:singleLine="true"
+        android:text="35min"
+        android:textColor="@color/colorLetraInformaciones"
         app:layout_constraintStart_toStartOf="@+id/tv_precio"
         app:layout_constraintTop_toBottomOf="@+id/tv_precio" />
 

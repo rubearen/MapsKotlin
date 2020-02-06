@@ -13,6 +13,7 @@ class MyItem : ClusterItem {
     val mModelo: String?
     val mPrice: String?
     val mDistanceFromUser: String?
+    val mUrlReserva:String?
 
 
     constructor(
@@ -23,7 +24,8 @@ class MyItem : ClusterItem {
         marca: String,
         modelo: String?,
         price: String?,
-        distanceFromUser: String?
+        distanceFromUser: String?,
+        urlReserva:String?
     ) {
         mPosition = LatLng(lat, lng)
         mTitle = title
@@ -32,6 +34,7 @@ class MyItem : ClusterItem {
         mModelo = modelo
         mPrice = price
         mDistanceFromUser = distanceFromUser
+        mUrlReserva=urlReserva
     }
 
     override fun getPosition(): LatLng {

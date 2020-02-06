@@ -44,7 +44,7 @@ class Position(
 }
 
 class Urls(
-    var reserveUrl: String
+    var reserveUrl: String?
 ) {
     override fun toString(): String {
         return "Urls(reserveUrl='$reserveUrl')"

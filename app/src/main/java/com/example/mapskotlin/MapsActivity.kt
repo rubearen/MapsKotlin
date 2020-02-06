@@ -34,7 +34,7 @@ import com.google.maps.android.clustering.Cluster
 
 open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var btnReservar: Button
+
 
     protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -62,7 +62,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_maps)
+        setContentView(R.layout.activity_map_buttons)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
@@ -88,15 +88,16 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
         setUpClusterer()
         listener()
-        map.uiSettings.isMapToolbarEnabled=false
+        map.uiSettings.isMapToolbarEnabled = false
         map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
-        map.isMyLocationEnabled = true      //habilitamos los controles del boton para ubicar en mi posicion
+        map.isMyLocationEnabled =
+            true      //habilitamos los controles del boton para ubicar en mi posicion
         map.setOnMarkerClickListener(mClusterManager)
 
         sacarArrayScout()
         sacarArrayEcooltra()
         setUpMap()
-        seUptInfoWindow()
+        setUpInfoWindow()
 
 
     }
@@ -116,7 +117,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             )
             return
         }
-       // map.isMyLocationEnabled = true
+        // map.isMyLocationEnabled = true
 
         fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
             // Got last known location. In some rare situations this can be null.
@@ -128,13 +129,11 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     CameraUpdateFactory.newLatLngZoom(
                         currentLatLng,
                         15f
-                    ),4000,null
+                    ), 4000, null
                 ) //mueve la camara al punto en el que se encuentra el usuario (position, zoom, tiempo animación, null)
             }
         }
     }
-
-
 
 
     fun onMapReadyCallback() { // Registrar escucha onMapReadyCallback
@@ -279,7 +278,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     moto.longitude.toDouble(),
                     moto.id,
                     null,
-                    "Scoot", moto.vehicle_type, null, null
+                    "Scoot", moto.vehicle_type, null, null, null
                 )
             placeMotoOnMapClustering(item)
         }
@@ -316,8 +315,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 MyItem(
                     moto.position.latitude.toDouble(),
                     moto.position.longitude.toDouble(),
-                    moto.id, moto.distance,
-                    "Ecooltra", moto.vehicleType, moto.pricePerMinute, moto.currentDistance
+                    moto.id,
+                    moto.distance,
+                    "Ecooltra",
+                    moto.vehicleType,
+                    moto.pricePerMinute,
+                    moto.currentDistance,
+                    moto.urls?.reserveUrl
                 )
             placeMotoOnMapClustering(item)
         }
@@ -368,11 +372,12 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-    private fun seUptInfoWindow() {
+    private fun setUpInfoWindow() {
 
         var customInfoWindow = CustomInfoWindow(this)
-        map.setInfoWindowAdapter(mClusterManager.markerManager)
-        mClusterManager.markerCollection.setOnInfoWindowAdapter(customInfoWindow)
+        map.setInfoWindowAdapter(mClusterManager.markerManager) //el cluster se ocupa del infoview
+        mClusterManager.markerCollection.setOnInfoWindowAdapter(customInfoWindow) //ponemos el custom infoview
+        map.setOnInfoWindowClickListener(mClusterManager)  //el cluster manager se ocupa del listener del infoview
 
     }
 
@@ -405,7 +410,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 map.animateCamera(
                     CameraUpdateFactory.newLatLngZoom(
-                        item.position,map.cameraPosition.zoom+2
+                        item.position, map.cameraPosition.zoom + 2
 
                     ), 600, null
                 )
@@ -413,6 +418,19 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 true
             }
 
+        mClusterManager//listener para InfoView
+            .setOnClusterItemInfoWindowClickListener { myItem ->
+
+                Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show()
+                // startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("ecooltra://reserve?vehicle_id=ES-B-A00990&referrer_id=RaccTrips")));
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse(myItem.mUrlReserva)
+                    )
+                )
+
+            }
 /*
                //listener marker
 
@@ -433,10 +451,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                   // marker.hideInfoWindow()
 
 
-                    startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("ecooltra://reserve?vehicle_id=ES-B-A00990&referrer_id=RaccTrips")));
+                    startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("")));
 
 
-               }*/
+               }
+*/
+
+
     }
 
 
