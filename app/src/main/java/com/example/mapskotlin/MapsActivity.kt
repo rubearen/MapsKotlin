@@ -29,13 +29,21 @@ import com.google.android.gms.maps.model.Marker
 import android.view.View
 import android.widget.Button
 import com.google.android.gms.maps.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.maps.android.clustering.Cluster
 
 
 open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
-
+    protected var alItems = ArrayList<MyItem>()
+    private lateinit var fab: FloatingActionButton
+    private lateinit var fab1: FloatingActionButton
+    private lateinit var fabScoot: FloatingActionButton
+    private lateinit var fabEcooltra: FloatingActionButton
+    private var isFABOpen: Boolean = false //saber si el filtro esta desplegado o no
+    private var ecooltraCheck: Boolean = true
+    private var scootCheck: Boolean = true
     protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var lastLocation: Location
@@ -67,9 +75,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
 
-
         mapFragment.getMapAsync(this)
         onMapReadyCallback()
+
+        fab = findViewById(R.id.fab);
+        fab1 = findViewById(R.id.fab1);
+        fabScoot = findViewById(R.id.fab2);
+        fabEcooltra = findViewById(R.id.fab3);
     }
 
 
@@ -98,6 +110,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sacarArrayEcooltra()
         setUpMap()
         setUpInfoWindow()
+        marcarMotosMapa()
 
 
     }
@@ -246,11 +259,23 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mClusterManager = ClusterManager(this, map)
         map.setOnCameraIdleListener(mClusterManager)
+        mClusterManager.setRenderer(OwnIconRendered(this, map, mClusterManager)) //iconos
         // map.setOnMarkerClickListener(mClusterManager)
 
 
     }
 
+    fun marcarMotosMapa() {
+
+
+        mClusterManager.addItems(alItems)
+
+        /*
+        for (item: MyItem in alItems) {
+            placeMotoOnMapClustering(item)
+        }*/
+
+    }
 
     fun sacarArrayScout() {
 
@@ -280,7 +305,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     null,
                     "Scoot", moto.vehicle_type, null, null, null
                 )
-            placeMotoOnMapClustering(item)
+            alItems.add(item)
+            // placeMotoOnMapClustering(item)
         }
     }
 
@@ -323,7 +349,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     moto.currentDistance,
                     moto.urls?.reserveUrl
                 )
-            placeMotoOnMapClustering(item)
+            alItems.add(item)
+            // placeMotoOnMapClustering(item)
         }
     }
 
@@ -431,6 +458,70 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 )
 
             }
+
+        fab.setOnClickListener(View.OnClickListener { v: View? ->
+            if (!isFABOpen) {
+                showFABMenu()
+            } else {
+                closeFABMenu()
+            }
+
+
+        })
+
+        fabEcooltra.setOnClickListener(View.OnClickListener { v: View? ->
+
+            if (isFABOpen) {
+                if (!ecooltraCheck) {
+                    fabEcooltra.setImageResource(R.mipmap.ecooltra_icon)
+                    ecooltraCheck = true
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Ecooltra")) {
+                            mClusterManager.addItem(item)
+                        }
+                    }
+
+                } else {
+                    fabEcooltra.setImageResource(R.mipmap.ecooltra_grey)
+                    ecooltraCheck = false
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Ecooltra")) {
+                            mClusterManager.removeItem(item)
+                        }
+                    }
+                }
+            }
+            mClusterManager.cluster()
+
+        })
+
+        fabScoot.setOnClickListener(View.OnClickListener { v: View? ->
+
+            if (isFABOpen) {
+                if (!scootCheck) {
+                    fabScoot.setImageResource(R.mipmap.scout_icon)
+                    scootCheck = true
+
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Scoot")) {
+                            mClusterManager.addItem(item)
+                        }
+                    }
+                } else {
+                    fabScoot.setImageResource(R.mipmap.scoot_grey)
+                    scootCheck = false
+
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Scoot")) {
+                            mClusterManager.removeItem(item)
+                        }
+                    }
+
+                }
+            }
+            mClusterManager.cluster()
+
+        })
 /*
                //listener marker
 
@@ -458,6 +549,20 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 */
 
 
+    }
+
+    fun showFABMenu() {
+        isFABOpen = true
+        fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
+        fabScoot.animate().translationY(-getResources().getDimension(R.dimen.standard_105));
+        fabEcooltra.animate().translationY(-getResources().getDimension(R.dimen.standard_155));
+    }
+
+    fun closeFABMenu() {
+        isFABOpen = false
+        fab1.animate().translationY(0f)
+        fabScoot.animate().translationY(0f)
+        fabEcooltra.animate().translationY(0f)
     }
 
 

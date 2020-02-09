@@ -20,7 +20,8 @@
         android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageView
         android:id="@+id/pictureMoto"
@@ -92,9 +93,10 @@
         app:layout_constraintEnd_toEndOf="@+id/pictureMoto"
         app:layout_constraintStart_toStartOf="@+id/pictureMoto"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ecooltra_logo_letras" />
+        app:srcCompat="@drawable/ecooltra_logo_letras" /><![CDATA[
 
-    <![CDATA[
+
+
 
 
 
@@ -103,6 +105,7 @@
     app:srcCompat="@drawable/silence"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="71dp" />
+
 
 
 ]]>
