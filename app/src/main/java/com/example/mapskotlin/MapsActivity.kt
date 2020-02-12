@@ -1,6 +1,7 @@
 package com.example.mapskotlin
 
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -11,12 +12,14 @@ import android.graphics.BitmapFactory
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.model.*
+
 
 import com.google.gson.Gson
 import com.google.maps.android.clustering.ClusterManager
@@ -28,12 +31,21 @@ import com.google.android.gms.maps.model.Marker
 
 import android.view.View
 import android.widget.Button
+import com.google.android.gms.common.api.Status
 import com.google.android.gms.maps.*
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.net.PlacesClient
+import com.google.android.libraries.places.widget.Autocomplete
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.maps.android.clustering.Cluster
+import java.util.*
+import kotlin.collections.ArrayList
 
 
-open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectionListener {
 
 
     protected var alItems = ArrayList<MyItem>()
@@ -65,12 +77,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         private const val REQUEST_CHECK_SETTINGS = 2
         //ultimo marker que ha apretado el usuario, lo guardamos aquí para poder acceder desde custominfowindow
         var clickedClusterItem: MyItem? = null
+        private val TAG = "ClassName"
     }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_map_buttons)
+        setContentView(R.layout.activity_map_searchbar)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
@@ -111,6 +124,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setUpMap()
         setUpInfoWindow()
         marcarMotosMapa()
+        toolbarSetUp()
 
 
     }
@@ -120,12 +134,12 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
                 this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
+                Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 LOCATION_PERMISSION_REQUEST_CODE
             )
             return
@@ -166,12 +180,12 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //si no nos han dado permisos, los pedimos
         if (ActivityCompat.checkSelfPermission(
                 this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
+                Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 LOCATION_PERMISSION_REQUEST_CODE
             )
             return
@@ -226,6 +240,52 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    fun toolbarSetUp() {
+
+        var apikey: String = getString(R.string.api_key)
+
+        Places.initialize(applicationContext, apikey)
+
+        var placesClient: PlacesClient = Places.createClient(this)
+
+
+        var autocompleteFragment: AutocompleteSupportFragment =
+            supportFragmentManager.findFragmentById(R.id.autocomplete_fragment)
+                    as AutocompleteSupportFragment
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME))
+        autocompleteFragment.setOnPlaceSelectedListener(this)
+
+
+    }
+
+    override fun onPlaceSelected(place: Place) {
+
+
+
+        Log.i(TAG, "Place: " + place.getName() + ", " + place.getId())
+        Toast.makeText(
+            getBaseContext(),
+            "AAAAAAAAAAAAAAAAAAAAAAAA",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        map.animateCamera(
+            CameraUpdateFactory.newLatLngZoom(
+                place.latLng, map.cameraPosition.zoom + 2
+
+            ), 600, null
+        )
+    }
+
+    override fun onError(status: Status) {
+        Log.i(TAG, "An error occurred: " + status)
+        Toast.makeText(
+            getBaseContext(),
+            "EEEEEEEEEEEEEEEEEEEEEERRRROOR",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
 
     //  start the update request if it has a RESULT_OK result for a REQUEST_CHECK_SETTINGS
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -234,6 +294,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             if (resultCode == Activity.RESULT_OK) {
                 locationUpdateState = true
                 startLocationUpdates()
+
             }
         }
     }
