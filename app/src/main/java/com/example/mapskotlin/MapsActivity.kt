@@ -124,8 +124,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         setUpMap()
         setUpInfoWindow()
         marcarMotosMapa()
-        toolbarSetUp()
-
+        searchbarSetUp()
 
     }
 
@@ -144,7 +143,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             )
             return
         }
-        // map.isMyLocationEnabled = true
+
 
         fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
             // Got last known location. In some rare situations this can be null.
@@ -168,8 +167,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(p0: LocationResult) {
                 super.onLocationResult(p0)
-                lastLocation = p0.lastLocation
-                // placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
+                lastLocation = p0.lastLocation //se va acutalizando la posición actual y se guarda en esta var
+                 //placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
             }
         }
         createLocationRequest()
@@ -240,8 +239,9 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         }
     }
 
-    fun toolbarSetUp() {
 
+    fun searchbarSetUp() {//funcion para activar la searchbar
+        //usamos la api de google, hay que activar tanto maps, como places
         var apikey: String = getString(R.string.api_key)
 
         Places.initialize(applicationContext, apikey)
@@ -252,14 +252,20 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         var autocompleteFragment: AutocompleteSupportFragment =
             supportFragmentManager.findFragmentById(R.id.autocomplete_fragment)
                     as AutocompleteSupportFragment
-        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME))
-        autocompleteFragment.setOnPlaceSelectedListener(this)
+        autocompleteFragment.setPlaceFields(
+            Arrays.asList(
+                Place.Field.ID,
+                Place.Field.NAME,
+                Place.Field.LAT_LNG
+            )
+        ) //esta es la información que nos devolverá el objeto place de la searchbar
+        autocompleteFragment.setOnPlaceSelectedListener(this) //listener
 
 
     }
 
+    //listener de la searchbar, cuando elegimos un lugar
     override fun onPlaceSelected(place: Place) {
-
 
 
         Log.i(TAG, "Place: " + place.getName() + ", " + place.getId())
@@ -271,12 +277,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         map.animateCamera(
             CameraUpdateFactory.newLatLngZoom(
-                place.latLng, map.cameraPosition.zoom + 2
+                place.latLng, 15f
 
             ), 600, null
         )
     }
 
+    //listener de la searchbar, cuando no elegimos o da error
     override fun onError(status: Status) {
         Log.i(TAG, "An error occurred: " + status)
         Toast.makeText(
