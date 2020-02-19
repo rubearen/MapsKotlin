@@ -228,6 +228,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 try {
                     // Show the dialog by calling startResolutionForResult(),
                     // and check the result in onActivityResult().
+                    
                     e.startResolutionForResult(
                         this@MapsActivity,
                         REQUEST_CHECK_SETTINGS
