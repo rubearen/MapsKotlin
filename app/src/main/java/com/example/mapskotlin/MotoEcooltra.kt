@@ -1,6 +1,6 @@
 package com.example.mapskotlin
 
-//classes para sacar las motos del json de scout
+//classes para sacar las motos del jsonScout de scout
 
 
 class MotoEcooltra(

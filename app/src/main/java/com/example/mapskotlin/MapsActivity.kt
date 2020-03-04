@@ -3,7 +3,6 @@ package com.example.mapskotlin
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import android.content.pm.PackageManager
@@ -12,6 +11,7 @@ import android.graphics.BitmapFactory
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,20 +27,18 @@ import com.google.maps.android.clustering.ClusterManager
 
 import java.io.IOException
 import java.io.InputStream
-import com.google.android.gms.maps.model.Marker
 
 import android.view.View
-import android.widget.Button
+import androidx.core.os.postDelayed
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.maps.*
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.PlacesClient
-import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.maps.android.clustering.Cluster
+import java.net.URL
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -80,6 +78,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         private val TAG = "ClassName"
     }
 
+    var jsonScout = ""//variable para guardar los jsonScout con la info de las motos
+    var jsonEcooltra = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,6 +89,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             .findFragmentById(R.id.map) as SupportMapFragment
 
         mapFragment.getMapAsync(this)
+
         onMapReadyCallback()
 
         fab = findViewById(R.id.fab);
@@ -111,6 +112,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
+        jsonFromApi()
         setUpClusterer()
         listener()
         map.uiSettings.isMapToolbarEnabled = false
@@ -119,8 +121,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             true      //habilitamos los controles del boton para ubicar en mi posicion
         map.setOnMarkerClickListener(mClusterManager)
 
-        sacarArrayScout()
-        sacarArrayEcooltra()
+        // sacarArrayScout()
+        // sacarArrayEcooltra()
         setUpMap()
         setUpInfoWindow()
         marcarMotosMapa()
@@ -167,8 +169,9 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(p0: LocationResult) {
                 super.onLocationResult(p0)
-                lastLocation = p0.lastLocation //se va acutalizando la posición actual y se guarda en esta var
-                 //placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
+                lastLocation =
+                    p0.lastLocation //se va acutalizando la posición actual y se guarda en esta var
+                //placeMarkerOnMap(LatLng(lastLocation.latitude, lastLocation.longitude))
             }
         }
         createLocationRequest()
@@ -228,7 +231,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 try {
                     // Show the dialog by calling startResolutionForResult(),
                     // and check the result in onActivityResult().
-                    
+
                     e.startResolutionForResult(
                         this@MapsActivity,
                         REQUEST_CHECK_SETTINGS
@@ -349,17 +352,18 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     fun sacarArrayScout() {
 
         val gson = Gson()
-        var json = ""
+        //var jsonScout = ""
 
         try {
             val inputStream: InputStream = assets.open("vehicles.json")
-            json = inputStream.bufferedReader().use { it.readText() }
+            //jsonScout = inputStream.bufferedReader().use { it.readText() }
+
 
         } catch (e: IOException) {
             e.printStackTrace()
         }
         val arrayScouts: ScoutMotos =
-            gson.fromJson(json, ScoutMotos::class.java)
+            gson.fromJson(jsonScout, ScoutMotos::class.java)
 
         println(arrayScouts.vehicles[0].toString())
         val motos: Array<MotoScout> = arrayScouts.vehicles
@@ -382,17 +386,17 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     fun sacarArrayEcooltra() {
 
         val gson = Gson()
-        var json = ""
+        //jsonEcooltra = ""
 
         try {
             val inputStream: InputStream = assets.open("ecooltra.json")
-            json = inputStream.bufferedReader().use { it.readText() }
+            jsonEcooltra = inputStream.bufferedReader().use { it.readText() }
 
         } catch (e: IOException) {
             e.printStackTrace()
         }
         val arrayEcooltras: EcooltraMotos =
-            gson.fromJson(json, EcooltraMotos::class.java)
+            gson.fromJson(jsonEcooltra, EcooltraMotos::class.java)
 
 
         val motos: Array<EcooltraMotosInferior> = arrayEcooltras.vehicles
@@ -593,27 +597,19 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         })
 /*
                //listener marker
-
                map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
                    override fun onMarkerClick(marker: Marker): Boolean {
                        Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
                        marker.showInfoWindow()
-
                        return false
                    }
                })
-
                //listener info window
-
                map.setOnInfoWindowClickListener { marker ->
                    val ssid = marker.title
                    Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
                   // marker.hideInfoWindow()
-
-
                     startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("")));
-
-
                }
 */
 
@@ -622,9 +618,9 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     fun showFABMenu() {
         isFABOpen = true
-        fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
-        fabScoot.animate().translationY(-getResources().getDimension(R.dimen.standard_105));
-        fabEcooltra.animate().translationY(-getResources().getDimension(R.dimen.standard_155));
+        fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55))
+        fabScoot.animate().translationY(-getResources().getDimension(R.dimen.standard_105))
+        fabEcooltra.animate().translationY(-getResources().getDimension(R.dimen.standard_155))
     }
 
     fun closeFABMenu() {
@@ -634,5 +630,31 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         fabEcooltra.animate().translationY(0f)
     }
 
+    fun jsonFromApi() {
+
+        Thread({
+            jsonScout = URL("https://api.myjson.com/bins/9akyq").readText()
+            jsonEcooltra = URL("https://api.myjson.com/bins/9akyq").readText()
+
+
+            runOnUiThread({
+
+
+                sacarArrayScout()
+                sacarArrayEcooltra()
+                marcarMotosMapa()
+                Handler().postDelayed({
+                    jsonFromApi()
+
+                }, 10000)
+
+            })
+        }).start()
+
+    }
+    /*Handler().postDelayed({
+        jsonFromApi()
+
+    }, 10000)*/
 
 }
