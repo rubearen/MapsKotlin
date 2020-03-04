@@ -339,8 +339,10 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     fun marcarMotosMapa() {
 
-
+        Toast.makeText(this, alItems.size.toString(), Toast.LENGTH_LONG).show()
+        mClusterManager.clearItems()
         mClusterManager.addItems(alItems)
+        mClusterManager.cluster()
 
         /*
         for (item: MyItem in alItems) {
@@ -639,9 +641,10 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
             runOnUiThread({
 
-
+                alItems.clear()
                 sacarArrayScout()
                 sacarArrayEcooltra()
+
                 marcarMotosMapa()
                 Handler().postDelayed({
                     jsonFromApi()
