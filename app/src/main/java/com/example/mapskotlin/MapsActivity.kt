@@ -6,54 +6,52 @@ import android.app.Activity
 import android.content.Intent
 import android.content.IntentSender
 import android.content.pm.PackageManager
-
 import android.graphics.BitmapFactory
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.ResolvableApiException
-import com.google.android.gms.location.*
-import com.google.android.gms.maps.model.*
-
-
-import com.google.gson.Gson
-import com.google.maps.android.clustering.ClusterManager
-
-
-import java.io.IOException
-import java.io.InputStream
-
-import android.view.View
-import androidx.core.os.postDelayed
 import com.google.android.gms.common.api.Status
-import com.google.android.gms.maps.*
+import com.google.android.gms.location.*
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.gson.Gson
+import com.google.maps.android.clustering.ClusterManager
+import kotlinx.android.synthetic.main.activity_map_searchbar.*
 import java.net.URL
 import java.util.*
 import kotlin.collections.ArrayList
 
 
 open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectionListener {
+    private var jsonUpdate = true
 
-
+    //necesitamos 2 arraylist para actualizar solo los datos nuevos o que hay que borrar, y mantener los que siguen
     protected var alItems = ArrayList<MyItem>()
-    private lateinit var fab: FloatingActionButton
-    private lateinit var fab1: FloatingActionButton
-    private lateinit var fabScoot: FloatingActionButton
-    private lateinit var fabEcooltra: FloatingActionButton
+    protected var alItemsActualizado = ArrayList<MyItem>()
+
     private var isFABOpen: Boolean = false //saber si el filtro esta desplegado o no
+    //flag para saber cuando está activada o no una marca
     private var ecooltraCheck: Boolean = true
     private var scootCheck: Boolean = true
+    private var accionaCheck: Boolean=true
+
     protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var lastLocation: Location
@@ -78,8 +76,11 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         private val TAG = "ClassName"
     }
 
-    var jsonScout = ""//variable para guardar los jsonScout con la info de las motos
+    //variables para guardar los JSON con la info de las motos, tenemos 2 de cada para simular una api real que se actualiza
+    var jsonScout = ""
     var jsonEcooltra = ""
+    var jsonEcooltraBorrado = ""
+    var jsonScoutBorrado = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,41 +93,13 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         onMapReadyCallback()
 
-        fab = findViewById(R.id.fab);
-        fab1 = findViewById(R.id.fab1);
-        fabScoot = findViewById(R.id.fab2);
-        fabEcooltra = findViewById(R.id.fab3);
     }
-
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
 
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-        jsonFromApi()
-        setUpClusterer()
-        listener()
-        map.uiSettings.isMapToolbarEnabled = false
-        map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
-        map.isMyLocationEnabled =
-            true      //habilitamos los controles del boton para ubicar en mi posicion
-        map.setOnMarkerClickListener(mClusterManager)
-
-        // sacarArrayScout()
-        // sacarArrayEcooltra()
         setUpMap()
-        setUpInfoWindow()
-        marcarMotosMapa()
-        searchbarSetUp()
+
 
     }
 
@@ -145,20 +118,51 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             )
             return
         }
+        //si tiene permisos iniciamos la app, si los tiene que pedir, la iniciamos en onRequestPermissionsResult
+        jsonFromApi()
+        setUpClusterer()
+        listener()
+        setUpInfoWindow()
+        //marcarMotosMapa()
+        searchbarSetUp()
 
 
-        fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
-            // Got last known location. In some rare situations this can be null.
-            if (location != null) {
-                lastLocation = location
-                val currentLatLng = LatLng(location.latitude, location.longitude)
-                placeMarkerOnMap(currentLatLng) // marca en el punto en el que se encuentra el usuario al abrir al aplicación
-                map.animateCamera(
-                    CameraUpdateFactory.newLatLngZoom(
-                        currentLatLng,
-                        15f
-                    ), 4000, null
-                ) //mueve la camara al punto en el que se encuentra el usuario (position, zoom, tiempo animación, null)
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>, grantResults: IntArray
+    ) {
+        when (requestCode) {
+            LOCATION_PERMISSION_REQUEST_CODE -> {
+                // If request is cancelled, the result arrays are empty.
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    // permission was granted,
+                    Toast.makeText(this, "permisos aceptados", Toast.LENGTH_LONG).show()
+
+                    jsonFromApi()
+                    setUpClusterer()
+                    listener()
+                    setUpInfoWindow()
+                    // marcarMotosMapa()
+                    searchbarSetUp()
+
+
+                } else {
+                    // permission denied
+                    println("AAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////////////")
+                    Toast.makeText(this, "APP CERRADA", Toast.LENGTH_LONG).show()
+                    finishAffinity()
+
+
+                }
+                return
+            }
+
+            // Add other 'when' lines to check for other
+            // permissions this app might request.
+            else -> {
+                // Ignore all other requests.
             }
         }
     }
@@ -179,20 +183,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     }
 
     private fun startLocationUpdates() {//funcion para actualizar la posicion en tiempo real
-        //si no nos han dado permisos, los pedimos
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                LOCATION_PERMISSION_REQUEST_CODE
-            )
-            return
-        }
-        //si hay permisos,pedimos la localizacion
+
+        //pedimos la localizacion del usuario
         fusedLocationClient.requestLocationUpdates(
             locationRequest,
             locationCallback,
@@ -224,7 +216,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         }
         //failure, hay algun problema, mostramos un cuadro para  activar el gps
         task.addOnFailureListener { e ->
-            // 6
+
             if (e is ResolvableApiException) {
                 // Location settings are not satisfied, but this can be fixed
                 // by showing the user a dialog.
@@ -237,7 +229,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                         REQUEST_CHECK_SETTINGS
                     )
                 } catch (sendEx: IntentSender.SendIntentException) {
-                    // Ignore the error.
+
                 }
             }
         }
@@ -271,14 +263,6 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     //listener de la searchbar, cuando elegimos un lugar
     override fun onPlaceSelected(place: Place) {
 
-
-        Log.i(TAG, "Place: " + place.getName() + ", " + place.getId())
-        Toast.makeText(
-            getBaseContext(),
-            "AAAAAAAAAAAAAAAAAAAAAAAA",
-            Toast.LENGTH_SHORT
-        ).show()
-
         map.animateCamera(
             CameraUpdateFactory.newLatLngZoom(
                 place.latLng, 15f
@@ -290,11 +274,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     //listener de la searchbar, cuando no elegimos o da error
     override fun onError(status: Status) {
         Log.i(TAG, "An error occurred: " + status)
-        Toast.makeText(
-            getBaseContext(),
-            "EEEEEEEEEEEEEEEEEEEEEERRRROOR",
-            Toast.LENGTH_SHORT
-        ).show()
+
     }
 
 
@@ -329,11 +309,74 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     private fun setUpClusterer() {
 
+
         mClusterManager = ClusterManager(this, map)
         map.setOnCameraIdleListener(mClusterManager)
         mClusterManager.setRenderer(OwnIconRendered(this, map, mClusterManager)) //iconos
         // map.setOnMarkerClickListener(mClusterManager)
 
+        map.uiSettings.isMapToolbarEnabled = false
+        map.uiSettings.isZoomControlsEnabled = true //habilitamos los controles del ZOOM
+        map.isMyLocationEnabled =
+            true      //habilitamos los controles del boton para ubicar en mi posicion
+        map.setOnMarkerClickListener(mClusterManager)
+
+
+    }
+
+    fun actualizarMotos() {
+        //funcion para actualizar los items conforme los vayamos descargando, borramos los que ya no están disponibles
+        //y añadimos los nuevos , manteniendo los que sigan estando para que el usuario pueda seguir consultando las motos
+        //y no se le cierre el infoview cada vez que actualizamos (solo se le cerraría si la  moto que está consultando
+        // dejase de estar disponible, y en este caso se le muestra un toast al usuario informadole )
+
+        //para simular el funcionamiento de una api real, hemos creado 2 json, para que lea las motos de uno y otro cada x tiempo
+        //y actualice el mapa
+
+
+        var alItemsborrar = ArrayList<MyItem>()
+        for (item2 in alItemsActualizado) {
+            var flag = false
+            for (item in alItems) {
+                if (item.mUrlReserva.equals(item2.mUrlReserva)) {
+                    flag = true
+                }
+            }
+
+            if (!flag) {
+                if (clickedClusterItem?.mUrlReserva.equals(item2.mUrlReserva)) {
+                    Toast.makeText(
+                        this,
+                        "Esta moto ha dejado de estar disponible",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+                //alItemsActualizado.remove(item2)
+
+                alItemsborrar.add(item2)
+                mClusterManager.removeItem(item2)
+
+            }
+        }
+
+        alItemsActualizado.removeAll(alItemsborrar)
+
+        for (item in alItems) {
+            var flag = false
+            for (item2 in alItemsActualizado) {
+                if (item.mUrlReserva.equals(item2.mUrlReserva)) {
+                    flag = true
+                }
+            }
+            if (!flag) {
+                alItemsActualizado.add(item)
+                mClusterManager.addItem(item)
+
+
+            }
+        }
+
+        mClusterManager.cluster()
 
     }
 
@@ -341,6 +384,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         Toast.makeText(this, alItems.size.toString(), Toast.LENGTH_LONG).show()
         mClusterManager.clearItems()
+
+
         mClusterManager.addItems(alItems)
         mClusterManager.cluster()
 
@@ -354,51 +399,79 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     fun sacarArrayScout() {
 
         val gson = Gson()
+        /* //codigo para sacar las motos desde un json local guardado en assets
         //var jsonScout = ""
 
         try {
-            val inputStream: InputStream = assets.open("vehicles.json")
+            //val inputStream: InputStream = assets.open("vehicles.json")
             //jsonScout = inputStream.bufferedReader().use { it.readText() }
 
 
         } catch (e: IOException) {
             e.printStackTrace()
         }
-        val arrayScouts: ScoutMotos =
+
+ */
+        var arrayScouts: ScoutMotos =
             gson.fromJson(jsonScout, ScoutMotos::class.java)
+        if (!jsonUpdate) {
+            arrayScouts = gson.fromJson(jsonScoutBorrado, ScoutMotos::class.java)
+        }
+
 
         println(arrayScouts.vehicles[0].toString())
         val motos: Array<MotoScout> = arrayScouts.vehicles
 
-        for (moto in motos) {
-            moto.marca = "Scoot"
-            val item =
-                MyItem(
-                    moto.latitude.toDouble(),
-                    moto.longitude.toDouble(),
-                    moto.id,
-                    null,
-                    "Scoot", moto.vehicle_type, null, null, null
-                )
-            alItems.add(item)
-            // placeMotoOnMapClustering(item)
+        if (motos.size > 0) {
+            for (moto in motos) {
+                moto.marca = "Scoot"
+                val item =
+                    MyItem(
+                        moto.latitude.toDouble(),
+                        moto.longitude.toDouble(),
+                        moto.id,
+                        null,
+                        "Scoot", moto.vehicle_type, null, null, "scout" + moto.latitude
+                    )           //falta crear enlace para scout, nos sirve para diferenciarlas
+                alItems.add(item)
+                // placeMotoOnMapClustering(item)
+            }
         }
     }
 
     fun sacarArrayEcooltra() {
 
         val gson = Gson()
+        /* //codigo para sacar las motos desde un json local guardado en assets
         //jsonEcooltra = ""
 
         try {
-            val inputStream: InputStream = assets.open("ecooltra.json")
-            jsonEcooltra = inputStream.bufferedReader().use { it.readText() }
+            //  val inputStream: InputStream = assets.open("ecooltra.json")
+            // jsonEcooltra = inputStream.bufferedReader().use { it.readText() }
 
-        } catch (e: IOException) {
+            } catch (e: IOException) {
             e.printStackTrace()
         }
+
+
+
         val arrayEcooltras: EcooltraMotos =
             gson.fromJson(jsonEcooltra, EcooltraMotos::class.java)
+
+            */
+
+
+        val arrayEcooltras: EcooltraMotos
+        if (jsonUpdate) {
+            arrayEcooltras =
+                gson.fromJson(jsonEcooltra, EcooltraMotos::class.java)
+            jsonUpdate = false
+
+        } else {
+            arrayEcooltras =
+                gson.fromJson(jsonEcooltraBorrado, EcooltraMotos::class.java)
+            jsonUpdate = true
+        }
 
 
         val motos: Array<EcooltraMotosInferior> = arrayEcooltras.vehicles
@@ -448,7 +521,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     //funcion para poner moto en el mapa segun la marca
     fun placeMotoOnMap(moto: MotoScout) {
-        // 1
+// 1
 
         val markerOptions =
             MarkerOptions().position(LatLng(moto.latitude.toDouble(), moto.longitude.toDouble()))
@@ -462,7 +535,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             )
         map.addMarker(markerOptions)
 
-        //cluster
+//cluster
 
 
     }
@@ -486,15 +559,32 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     fun listener() {
 
+//listener que recibe la ultima localización al abrir la app
+        fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
+            //trabajamos con la ultima localización que tenemos
+            if (location != null) {
+                lastLocation = location
+                val currentLatLng = LatLng(location.latitude, location.longitude)
+                placeMarkerOnMap(currentLatLng) // marca en el punto en el que se encuentra el usuario al abrir al aplicación
+                map.animateCamera(
+                    CameraUpdateFactory.newLatLngZoom(
+                        currentLatLng,
+                        15f
+                    ), 4000, null
+                ) //mueve la camara al punto en el que se encuentra el usuario (position, zoom, tiempo animación, null)
+            } else {
+                Toast.makeText(getBaseContext(), "LOCATION IS NULL", Toast.LENGTH_SHORT).show()
 
-        //mClusterManager?.setOnClusterItemClickListener(this)
+
+            }
+        }
+
+
+//mClusterManager?.setOnClusterItemClickListener(this)
 
         mClusterManager//listener para cada MARKER
             .setOnClusterItemClickListener { item ->
                 clickedClusterItem = item
-
-
-
 
                 Toast.makeText(
                     getBaseContext(),
@@ -504,16 +594,14 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 false
             }
 
-        // mClusterManager?.setOnClusterClickListener(this)
+// mClusterManager?.setOnClusterClickListener(this)
 
         mClusterManager //listener para cada CLUSTER
             .setOnClusterClickListener { item ->
 
-
                 map.animateCamera(
                     CameraUpdateFactory.newLatLngZoom(
                         item.position, map.cameraPosition.zoom + 2
-
                     ), 600, null
                 )
                 // si devuelves false, no funciona el map animate camera
@@ -544,11 +632,37 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         })
 
-        fabEcooltra.setOnClickListener(View.OnClickListener { v: View? ->
+        fab1.setOnClickListener { v: View? ->
+            if (isFABOpen) {
+                if (!accionaCheck) {
+                    fab1.setImageResource(R.mipmap.acciona_icon)
+                    accionaCheck = true
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Acciona")) {
+                            mClusterManager.addItem(item)
+                        }
+                    }
+
+                } else {
+                    fab1.setImageResource(R.mipmap.acciona_icon_grey)
+                    accionaCheck = false
+                    for (item: MyItem in alItems) {
+                        if (item.mMarca.equals("Acciona")) {
+                            mClusterManager.removeItem(item)
+                        }
+                    }
+                }
+            }
+            mClusterManager.cluster()
+
+
+        }
+
+        fab3.setOnClickListener(View.OnClickListener { v: View? ->
 
             if (isFABOpen) {
                 if (!ecooltraCheck) {
-                    fabEcooltra.setImageResource(R.mipmap.ecooltra_icon)
+                    fab3.setImageResource(R.mipmap.ecooltra_icon)
                     ecooltraCheck = true
                     for (item: MyItem in alItems) {
                         if (item.mMarca.equals("Ecooltra")) {
@@ -557,7 +671,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                     }
 
                 } else {
-                    fabEcooltra.setImageResource(R.mipmap.ecooltra_grey)
+                    fab3.setImageResource(R.mipmap.ecooltra_grey)
                     ecooltraCheck = false
                     for (item: MyItem in alItems) {
                         if (item.mMarca.equals("Ecooltra")) {
@@ -570,11 +684,11 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         })
 
-        fabScoot.setOnClickListener(View.OnClickListener { v: View? ->
+        fab2.setOnClickListener(View.OnClickListener { v: View? ->
 
             if (isFABOpen) {
                 if (!scootCheck) {
-                    fabScoot.setImageResource(R.mipmap.scout_icon)
+                    fab2.setImageResource(R.mipmap.scout_icon)
                     scootCheck = true
 
                     for (item: MyItem in alItems) {
@@ -583,7 +697,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                         }
                     }
                 } else {
-                    fabScoot.setImageResource(R.mipmap.scoot_grey)
+                    fab2.setImageResource(R.mipmap.scoot_grey)
                     scootCheck = false
 
                     for (item: MyItem in alItems) {
@@ -598,21 +712,21 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         })
 /*
-               //listener marker
-               map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
-                   override fun onMarkerClick(marker: Marker): Boolean {
-                       Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
-                       marker.showInfoWindow()
-                       return false
-                   }
-               })
-               //listener info window
-               map.setOnInfoWindowClickListener { marker ->
-                   val ssid = marker.title
-                   Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
-                  // marker.hideInfoWindow()
-                    startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("")));
-               }
+       //listener marker
+       map.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
+           override fun onMarkerClick(marker: Marker): Boolean {
+               Toast.makeText(getBaseContext(), "you click marker"+marker.id, Toast.LENGTH_SHORT).show();
+               marker.showInfoWindow()
+               return false
+           }
+       })
+       //listener info window
+       map.setOnInfoWindowClickListener { marker ->
+           val ssid = marker.title
+           Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show();
+          // marker.hideInfoWindow()
+            startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("")));
+       }
 */
 
 
@@ -621,43 +735,47 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     fun showFABMenu() {
         isFABOpen = true
         fab1.animate().translationY(-getResources().getDimension(R.dimen.standard_55))
-        fabScoot.animate().translationY(-getResources().getDimension(R.dimen.standard_105))
-        fabEcooltra.animate().translationY(-getResources().getDimension(R.dimen.standard_155))
+        fab2.animate().translationY(-getResources().getDimension(R.dimen.standard_105))
+        fab3.animate().translationY(-getResources().getDimension(R.dimen.standard_155))
     }
 
     fun closeFABMenu() {
         isFABOpen = false
         fab1.animate().translationY(0f)
-        fabScoot.animate().translationY(0f)
-        fabEcooltra.animate().translationY(0f)
+        fab2.animate().translationY(0f)
+        fab3.animate().translationY(0f)
     }
 
     fun jsonFromApi() {
 
-        Thread({
+
+        Thread {
+
+
             jsonScout = URL("https://api.myjson.com/bins/9akyq").readText()
-            jsonEcooltra = URL("https://api.myjson.com/bins/9akyq").readText()
+            jsonScoutBorrado = URL("https://api.jsonbin.io/b/5e66351d1a3d6b7e7c050f1d").readText()
+
+            jsonEcooltra = URL("https://api.jsonbin.io/b/5e662c3a1a3d6b7e7c0508c3").readText()
+            jsonEcooltraBorrado =
+                URL("https://api.jsonbin.io/b/5e662d80ffe2e77da21fbce8").readText()
 
 
-            runOnUiThread({
+            runOnUiThread {
+
 
                 alItems.clear()
                 sacarArrayScout()
                 sacarArrayEcooltra()
-
-                marcarMotosMapa()
+                actualizarMotos()
+                //marcarMotosMapa()
                 Handler().postDelayed({
                     jsonFromApi()
 
                 }, 10000)
 
-            })
-        }).start()
+            }
+        }.start()
 
     }
-    /*Handler().postDelayed({
-        jsonFromApi()
-
-    }, 10000)*/
 
 }
