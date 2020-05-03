@@ -59,6 +59,7 @@
             android:layout_height="@dimen/standard_55"
             android:layout_gravity="bottom|start"
             android:layout_margin="16dp"
+            app:backgroundTint="@color/colorGreyMapControls"
             app:srcCompat="@android:drawable/ic_menu_preferences" />
 
 

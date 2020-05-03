@@ -50,7 +50,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     //flag para saber cuando está activada o no una marca
     private var ecooltraCheck: Boolean = true
     private var scootCheck: Boolean = true
-    private var accionaCheck: Boolean=true
+    private var accionaCheck: Boolean = true
 
     protected lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -98,6 +98,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
+        //cuando el mapa esta listo, arrancamos la app
         setUpMap()
 
 
@@ -150,25 +151,18 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
                 } else {
                     // permission denied
-                    println("AAAAAAAAAAAAAAAAAAAAAAA///////////////////////////////////////////")
-                    Toast.makeText(this, "APP CERRADA", Toast.LENGTH_LONG).show()
-                    finishAffinity()
-
-
+                    Toast.makeText(this, "Location permission needed", Toast.LENGTH_LONG)
+                        .show()
                 }
                 return
             }
 
-            // Add other 'when' lines to check for other
-            // permissions this app might request.
-            else -> {
-                // Ignore all other requests.
-            }
+
         }
     }
 
 
-    fun onMapReadyCallback() { // Registrar escucha onMapReadyCallback
+    fun onMapReadyCallback() { //
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(p0: LocationResult) {
@@ -188,7 +182,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         fusedLocationClient.requestLocationUpdates(
             locationRequest,
             locationCallback,
-            null /* Looper */
+            null /* Looper */ //el looper lo dejamoscomo null, para este tipo de callback, no hace falta pasarlo
         )
     }
 
@@ -197,7 +191,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         // recupera y gestiona los cambios que se realizaran segun el estado actual de la configuracion de ubicacion de usuario
         locationRequest = LocationRequest()
 
-        locationRequest.interval = 10000 //intervalo con el que queremos que reciva la posicion
+        locationRequest.interval = 10000 //intervalo con el que queremos que reciba la posicion
         locationRequest.fastestInterval =
             5000 //especificamos el intervalo maximo que la app puede pedir
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
@@ -205,7 +199,9 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         val builder = LocationSettingsRequest.Builder()
             .addLocationRequest(locationRequest)
 
-        // comprobamos el estado del user's location settings, creamos dos variales para comprobar
+        // comprobamos el estado del user's location settings, creamos dos variales para, posteriormente
+        // comprobar que los servicios de localización funcionan correctamente,  en caso de error
+        //pediomos al usuario que active el gps del dispositivo
         val client = LocationServices.getSettingsClient(this)
         val task = client.checkLocationSettings(builder.build())
 
@@ -232,6 +228,20 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
                 }
             }
+        }
+    }
+
+    // parar location update request
+    override fun onPause() {
+        super.onPause()
+        fusedLocationClient.removeLocationUpdates(locationCallback)
+    }
+
+    // reiniciar  location update request
+    public override fun onResume() {
+        super.onResume()
+        if (!locationUpdateState) {
+            startLocationUpdates()
         }
     }
 
@@ -290,20 +300,6 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         }
     }
 
-    // parar location update request
-    override fun onPause() {
-        super.onPause()
-        fusedLocationClient.removeLocationUpdates(locationCallback)
-    }
-
-    // reiniciar  location update request
-    public override fun onResume() {
-        super.onResume()
-        if (!locationUpdateState) {
-            startLocationUpdates()
-        }
-    }
-
 
     //funciones para iniciar clustering
 
@@ -354,12 +350,20 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 //alItemsActualizado.remove(item2)
 
                 alItemsborrar.add(item2)
-                mClusterManager.removeItem(item2)
+
+                if (item2.mMarca.equals("Ecooltra") && ecooltraCheck) {
+                    mClusterManager.removeItem(item2)
+                } else if (item2.mMarca.equals("Scoot") && scootCheck) {
+                    mClusterManager.removeItem(item2)
+                } else if (item2.mMarca.equals("Acciona") && accionaCheck) {
+                    mClusterManager.removeItem(item2)
+                }
 
             }
         }
 
         alItemsActualizado.removeAll(alItemsborrar)
+        mClusterManager.cluster()
 
         for (item in alItems) {
             var flag = false
@@ -370,7 +374,14 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             }
             if (!flag) {
                 alItemsActualizado.add(item)
-                mClusterManager.addItem(item)
+                if (item.mMarca.equals("Ecooltra") && ecooltraCheck) {
+                    mClusterManager.addItem(item)
+                } else if (item.mMarca.equals("Scoot") && scootCheck) {
+                    mClusterManager.addItem(item)
+                } else if (item.mMarca.equals("Acciona") && accionaCheck) {
+                    mClusterManager.addItem(item)
+                }
+                //   mClusterManager.addItem(item)
 
 
             }
@@ -399,19 +410,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     fun sacarArrayScout() {
 
         val gson = Gson()
-        /* //codigo para sacar las motos desde un json local guardado en assets
-        //var jsonScout = ""
 
-        try {
-            //val inputStream: InputStream = assets.open("vehicles.json")
-            //jsonScout = inputStream.bufferedReader().use { it.readText() }
-
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
- */
         var arrayScouts: ScoutMotos =
             gson.fromJson(jsonScout, ScoutMotos::class.java)
         if (!jsonUpdate) {
@@ -526,7 +525,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         val markerOptions =
             MarkerOptions().position(LatLng(moto.latitude.toDouble(), moto.longitude.toDouble()))
 
-        if (moto.marca.equals("scout"))
+        if (moto.marca.equals("Scoot"))
             markerOptions.icon(
                 BitmapDescriptorFactory.fromBitmap(
 
@@ -580,7 +579,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         }
 
 
-//mClusterManager?.setOnClusterItemClickListener(this)
+
 
         mClusterManager//listener para cada MARKER
             .setOnClusterItemClickListener { item ->
@@ -594,7 +593,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 false
             }
 
-// mClusterManager?.setOnClusterClickListener(this)
+
 
         mClusterManager //listener para cada CLUSTER
             .setOnClusterClickListener { item ->
@@ -611,16 +610,24 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         mClusterManager//listener para InfoView
             .setOnClusterItemInfoWindowClickListener { myItem ->
 
-                Toast.makeText(getBaseContext(), "you click info", Toast.LENGTH_SHORT).show()
+
                 // startActivity( Intent(Intent.ACTION_VIEW, Uri.parse("ecooltra://reserve?vehicle_id=ES-B-A00990&referrer_id=RaccTrips")));
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse(myItem.mUrlReserva)
-                    )
-                )
+                /* startActivity(
+                     Intent(
+                         Intent.ACTION_VIEW,
+                         Uri.parse(myItem.mUrlReserva)
+                     )
+                 )*/
+                if (myItem.mMarca.equals("Ecooltra")) {
+                    launchApp("com.mobime.ecooltra")
+                } else if (myItem.mMarca.equals("Scoot")) {
+                    launchApp("co.scoot.scootapp")
+                }
+
 
             }
+
+
 
         fab.setOnClickListener(View.OnClickListener { v: View? ->
             if (!isFABOpen) {
@@ -637,7 +644,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 if (!accionaCheck) {
                     fab1.setImageResource(R.mipmap.acciona_icon)
                     accionaCheck = true
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Acciona")) {
                             mClusterManager.addItem(item)
                         }
@@ -646,7 +653,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 } else {
                     fab1.setImageResource(R.mipmap.acciona_icon_grey)
                     accionaCheck = false
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Acciona")) {
                             mClusterManager.removeItem(item)
                         }
@@ -664,7 +671,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 if (!ecooltraCheck) {
                     fab3.setImageResource(R.mipmap.ecooltra_icon)
                     ecooltraCheck = true
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Ecooltra")) {
                             mClusterManager.addItem(item)
                         }
@@ -673,7 +680,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 } else {
                     fab3.setImageResource(R.mipmap.ecooltra_grey)
                     ecooltraCheck = false
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Ecooltra")) {
                             mClusterManager.removeItem(item)
                         }
@@ -691,7 +698,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                     fab2.setImageResource(R.mipmap.scout_icon)
                     scootCheck = true
 
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Scoot")) {
                             mClusterManager.addItem(item)
                         }
@@ -700,7 +707,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                     fab2.setImageResource(R.mipmap.scoot_grey)
                     scootCheck = false
 
-                    for (item: MyItem in alItems) {
+                    for (item: MyItem in alItemsActualizado) {
                         if (item.mMarca.equals("Scoot")) {
                             mClusterManager.removeItem(item)
                         }
@@ -752,21 +759,28 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         Thread {
 
 
-            jsonScout = URL("https://api.myjson.com/bins/9akyq").readText()
+            jsonScout = URL("   https://api.jsonbin.io/b/5e9826982940c704e1d926a7").readText()
             jsonScoutBorrado = URL("https://api.jsonbin.io/b/5e66351d1a3d6b7e7c050f1d").readText()
 
             jsonEcooltra = URL("https://api.jsonbin.io/b/5e662c3a1a3d6b7e7c0508c3").readText()
             jsonEcooltraBorrado =
                 URL("https://api.jsonbin.io/b/5e662d80ffe2e77da21fbce8").readText()
 
-
             runOnUiThread {
-
 
                 alItems.clear()
                 sacarArrayScout()
                 sacarArrayEcooltra()
                 actualizarMotos()
+                //toast para comprobar que la actualización esta funcionando correctamente
+              /*  Toast.makeText(
+                    this,
+                    "alItems:" + alItems.size.toString() + "alItemsActualizado:" + alItemsActualizado.size.toString() +
+                            "cluster: " + mClusterManager.algorithm.items.size
+                    ,
+                    Toast.LENGTH_LONG
+                ).show()*/
+
                 //marcarMotosMapa()
                 Handler().postDelayed({
                     jsonFromApi()
@@ -776,6 +790,31 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             }
         }.start()
 
+    }
+
+    private fun launchApp(packageName: String) {
+        // Get an instance of PackageManager
+        val pm = applicationContext.packageManager
+
+        // Initialize a new Intent
+        val intent: Intent? = pm.getLaunchIntentForPackage(packageName)
+
+        // Add category to intent
+        intent?.addCategory(Intent.CATEGORY_LAUNCHER)
+
+        // If intent is not null then launch the app
+        if (intent != null) {
+            applicationContext.startActivity(intent)
+        } else {
+            Toast.makeText(this, "Necesita instalar la app", Toast.LENGTH_LONG).show()
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=$packageName")
+                )
+            )
+
+        }
     }
 
 }

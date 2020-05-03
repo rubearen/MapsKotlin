@@ -6,7 +6,7 @@ class MotoScout(
     val latitude: String,
     val longitude: String,
     var vehicle_type: String,
-     var marca: String = "Scoot"
+    var marca: String = "Scoot"
 ) {
 
 

@@ -14,7 +14,7 @@ class MotoEcooltra(
     var currentDistance: String?
 
 ) {
-    var marca: String = "Scoot"
+    var marca: String = "Ecooltra"
 
 
     override fun toString(): String {
