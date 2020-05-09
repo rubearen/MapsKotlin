@@ -83,14 +83,18 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     var jsonScoutBorrado = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //usamos el tema por defecto para mostrar pantalla de inicio, y en cuanto la app esté lista,
+        // cambiamos el tema, de esta forma nos aseguramos que la pantalla de inicio no ralentiza el inicio
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map_searchbar)
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+        //obtiene el SupportMapFragment y es notificado cuando el mapa está listo
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
 
         mapFragment.getMapAsync(this)
-
         onMapReadyCallback()
 
     }
@@ -101,11 +105,9 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         //cuando el mapa esta listo, arrancamos la app
         setUpMap()
 
-
     }
 
-    //This code checks if the app has been granted the ACCESS_FINE_LOCATION permission.
-    // //If it hasn’t, then request it from the user.
+    //revisamos los permisos ante de empezar, si no los tiene, los pedimos
     private fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -141,6 +143,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                     // permission was granted,
                     Toast.makeText(this, "permisos aceptados", Toast.LENGTH_LONG).show()
 
+        //si no teníamos permisos y los hemos pedido, iniciamos la app
                     jsonFromApi()
                     setUpClusterer()
                     listener()
@@ -201,7 +204,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
 
         // comprobamos el estado del user's location settings, creamos dos variales para, posteriormente
         // comprobar que los servicios de localización funcionan correctamente,  en caso de error
-        //pediomos al usuario que active el gps del dispositivo
+        //pedimos al usuario que active el gps del dispositivo
         val client = LocationServices.getSettingsClient(this)
         val task = client.checkLocationSettings(builder.build())
 
@@ -321,7 +324,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     }
 
     fun actualizarMotos() {
-        //funcion para actualizar los items conforme los vayamos descargando, borramos los que ya no están disponibles
+        //funcion para actualizar los items, conforme los vayamos descargando, borramos los que ya no están disponibles
         //y añadimos los nuevos , manteniendo los que sigan estando para que el usuario pueda seguir consultando las motos
         //y no se le cierre el infoview cada vez que actualizamos (solo se le cerraría si la  moto que está consultando
         // dejase de estar disponible, y en este caso se le muestra un toast al usuario informadole )
@@ -443,7 +446,6 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
         val gson = Gson()
         /* //codigo para sacar las motos desde un json local guardado en assets
         //jsonEcooltra = ""
-
         try {
             //  val inputStream: InputStream = assets.open("ecooltra.json")
             // jsonEcooltra = inputStream.bufferedReader().use { it.readText() }
@@ -451,12 +453,8 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             } catch (e: IOException) {
             e.printStackTrace()
         }
-
-
-
         val arrayEcooltras: EcooltraMotos =
             gson.fromJson(jsonEcooltra, EcooltraMotos::class.java)
-
             */
 
 
@@ -497,7 +495,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                     moto.urls?.reserveUrl
                 )
             alItems.add(item)
-            // placeMotoOnMapClustering(item)
+
         }
     }
 
@@ -564,7 +562,7 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
             if (location != null) {
                 lastLocation = location
                 val currentLatLng = LatLng(location.latitude, location.longitude)
-                placeMarkerOnMap(currentLatLng) // marca en el punto en el que se encuentra el usuario al abrir al aplicación
+                placeMarkerOnMap(currentLatLng) // marca en el punto en el que se encuentra el usuario al abrir la aplicación
                 map.animateCamera(
                     CameraUpdateFactory.newLatLngZoom(
                         currentLatLng,
@@ -773,19 +771,19 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
                 sacarArrayEcooltra()
                 actualizarMotos()
                 //toast para comprobar que la actualización esta funcionando correctamente
-              /*  Toast.makeText(
-                    this,
-                    "alItems:" + alItems.size.toString() + "alItemsActualizado:" + alItemsActualizado.size.toString() +
-                            "cluster: " + mClusterManager.algorithm.items.size
-                    ,
-                    Toast.LENGTH_LONG
-                ).show()*/
+                /*  Toast.makeText(
+                      this,
+                      "alItems:" + alItems.size.toString() + "alItemsActualizado:" + alItemsActualizado.size.toString() +
+                              "cluster: " + mClusterManager.algorithm.items.size
+                      ,
+                      Toast.LENGTH_LONG
+                  ).show()*/
 
                 //marcarMotosMapa()
                 Handler().postDelayed({
                     jsonFromApi()
 
-                }, 10000)
+                }, 20000)
 
             }
         }.start()
@@ -793,26 +791,34 @@ open class MapsActivity : AppCompatActivity(), OnMapReadyCallback, PlaceSelectio
     }
 
     private fun launchApp(packageName: String) {
-        // Get an instance of PackageManager
+
+        //instancia de PackageManager
         val pm = applicationContext.packageManager
 
-        // Initialize a new Intent
+        //creamos intent con ese package name
         val intent: Intent? = pm.getLaunchIntentForPackage(packageName)
 
-        // Add category to intent
+        //asignamos al intent la categoría de launcher
         intent?.addCategory(Intent.CATEGORY_LAUNCHER)
 
-        // If intent is not null then launch the app
+        //si el intent no es null, la aplicación existe y la podemos lanzar
         if (intent != null) {
             applicationContext.startActivity(intent)
         } else {
-            Toast.makeText(this, "Necesita instalar la app", Toast.LENGTH_LONG).show()
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("market://details?id=$packageName")
+            try {
+                Toast.makeText(this, "Necesita instalar la app", Toast.LENGTH_LONG).show()
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("market://details?id=$packageName")
+                    )
                 )
-            )
+
+            } catch (e: Exception) {
+                //si el dispositivo no dispone de google play, mostramos una notificación
+                Toast.makeText(this, "Este dispositivo no dispone de Google Play", Toast.LENGTH_LONG).show()
+            }
+
 
         }
     }
